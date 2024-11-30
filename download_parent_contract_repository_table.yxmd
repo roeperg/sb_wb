@@ -293,7 +293,7 @@
           <JupyterGuidDir>0e6b3c014bae8f8e5afd8c3d197e6a6a</JupyterGuidDir>
           <JupyterGuidCopy />
           <LastExecutedByEngineVersion>2023.2.1.226</LastExecutedByEngineVersion>
-          <Notebook><![CDATA[{"cells":[{"metadata":{"ayx":{"cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","contents_keyword":"Alteryx.help()","label":"info"}},"cell_type":"markdown","source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"metadata":{"ayx":{"cell_css":"border: 1px solid #58a; margin: 2px;","contents_keyword":"installPackages","label":"deps"}},"cell_type":"code","source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"],"execution_count":1,"outputs":[]},{"metadata":{},"cell_type":"code","source":["from ayx import Alteryx\n","import pandas as pd\n","import json\n","import requests\n","\n"],"execution_count":2,"outputs":[]},{"metadata":{},"cell_type":"code","source":["headers = {\n","    'QB-Realm-Hostname': 'https://intuitcorp.quickbase.com',\n","    'User-Agent': '{User-Agent}',\n","    'Authorization': 'QB-USER-TOKEN byg59k_k_0_ch28y3ybhdbuxfzkdnzacdu8frq',\n","    'Content-Type': 'application/json',\n","}\n","\n","testlength = 10\n","start, end = [0,10001]\n","\n","while testlength != 0:\n","    body = {\n","      \"from\": \"brs5frizx\",\n","      \"select\": [\n","        3,6,9,10,11,15,16,17,18,19\n","        ,24,26,27,28,29,30,31,32,33,42\n","        ,43,44,45,46,47,48,49\n","      ],\n","      \"where\": \"{3.GT.'%d'}AND{3.LT.'%d'}\" %(start,end),\n","      \"sortBy\": [\n","        {\n","          \"fieldId\": 3,\n","          \"order\": \"ASC\"\n","        },\n","      ],\n","      #\"groupBy\": [\n","      #  {\n","      #    \"fieldId\": 6,\n","      #    \"grouping\": \"equal-values\"\n","      #  }\n","      #],\n","     \"options\": {\n","        \"skip\": 0,\n","        \"top\": 0,\n","      }}\n","\n","    r = requests.post('''https://api.quickbase.com/v1/records/query''',\n","    headers = headers,\n","    json = body\n","    )\n","\n","    # check keys\n","\n","    response_list = r.json()['data']\n","    testlength = len(response_list)\n","    if testlength > 0:\n","        field_list = r.json()['fields']\n","        dataFrame = pd.json_normalize(response_list)\n","        Alteryx.write(dataFrame, 1)\n","\n","        fieldFrame = pd.json_normalize(field_list)\n","        fieldFrame = fieldFrame.drop('type', axis=1)\n","        \n","        Alteryx.write(fieldFrame, 2)\n","        start += 10000\n","        end   += 10000\n","        print(start,end)\n","\n"],"execution_count":3,"outputs":[]},{"metadata":{},"cell_type":"code","source":[],"execution_count":4,"outputs":[]}],"metadata":{"kernelspec":{"name":"designerbasetools_venv","display_name":"designerbasetools_venv","language":"python"},"language_info":{"name":"python","version":"3.8.16","mimetype":"text/x-python","codemirror_mode":{"name":"ipython","version":3},"pygments_lexer":"ipython3","nbconvert_exporter":"python","file_extension":".py"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <Notebook><![CDATA[{"cells":[{"metadata":{"ayx":{"cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","contents_keyword":"Alteryx.help()","label":"info"}},"cell_type":"markdown","source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"metadata":{"ayx":{"cell_css":"border: 1px solid #58a; margin: 2px;","contents_keyword":"installPackages","label":"deps"}},"cell_type":"code","source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"],"execution_count":1,"outputs":[]},{"metadata":{},"cell_type":"code","source":["from ayx import Alteryx\n","import pandas as pd\n","import json\n","import requests\n","\n"],"execution_count":2,"outputs":[]},{"metadata":{},"cell_type":"code","source":["headers = {\n","    'QB-Realm-Hostname': 'https://intuitcorp.quickbase.com',\n","    'User-Agent': '{User-Agent}',\n","    'Authorization': 'QB-USER-TOKEN fwfwfdwf',\n","    'Content-Type': 'application/json',\n","}\n","\n","testlength = 10\n","start, end = [0,10001]\n","\n","while testlength != 0:\n","    body = {\n","      \"from\": \"brs5frizx\",\n","      \"select\": [\n","        3,6,9,10,11,15,16,17,18,19\n","        ,24,26,27,28,29,30,31,32,33,42\n","        ,43,44,45,46,47,48,49\n","      ],\n","      \"where\": \"{3.GT.'%d'}AND{3.LT.'%d'}\" %(start,end),\n","      \"sortBy\": [\n","        {\n","          \"fieldId\": 3,\n","          \"order\": \"ASC\"\n","        },\n","      ],\n","      #\"groupBy\": [\n","      #  {\n","      #    \"fieldId\": 6,\n","      #    \"grouping\": \"equal-values\"\n","      #  }\n","      #],\n","     \"options\": {\n","        \"skip\": 0,\n","        \"top\": 0,\n","      }}\n","\n","    r = requests.post('''https://api.quickbase.com/v1/records/query''',\n","    headers = headers,\n","    json = body\n","    )\n","\n","    # check keys\n","\n","    response_list = r.json()['data']\n","    testlength = len(response_list)\n","    if testlength > 0:\n","        field_list = r.json()['fields']\n","        dataFrame = pd.json_normalize(response_list)\n","        Alteryx.write(dataFrame, 1)\n","\n","        fieldFrame = pd.json_normalize(field_list)\n","        fieldFrame = fieldFrame.drop('type', axis=1)\n","        \n","        Alteryx.write(fieldFrame, 2)\n","        start += 10000\n","        end   += 10000\n","        print(start,end)\n","\n"],"execution_count":3,"outputs":[]},{"metadata":{},"cell_type":"code","source":[],"execution_count":4,"outputs":[]}],"metadata":{"kernelspec":{"name":"designerbasetools_venv","display_name":"designerbasetools_venv","language":"python"},"language_info":{"name":"python","version":"3.8.16","mimetype":"text/x-python","codemirror_mode":{"name":"ipython","version":3},"pygments_lexer":"ipython3","nbconvert_exporter":"python","file_extension":".py"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -335,7 +335,7 @@
               </Fields>
               <Data>
                 <r>
-                  <c>byg59k_k_0_ch28y3ybhdbuxfzkdnzacdu8frq</c>
+                  <c>fwfwfdwf</c>
                   <c>bnskksae5</c>
                   <c>1</c>
                 </r>
@@ -384,7 +384,7 @@
               </Fields>
               <Data>
                 <r>
-                  <c>byg59k_k_0_ch28y3ybhdbuxfzkdnzacdu8frq</c>
+                  <c>fwfwfdwf</c>
                   <c>bnskksae5</c>
                   <c>321</c>
                 </r>
@@ -431,7 +431,7 @@ Report ID=Report ID
               </Fields>
               <Data>
                 <r>
-                  <c>byg59k_k_0_ch28y3ybhdbuxfzkdnzacdu8frq</c>
+                  <c>fwfwfdwf</c>
                   <c>bnskksae5</c>
                   <c>321</c>
                 </r>
@@ -478,7 +478,7 @@ Report ID=Report ID
               </Fields>
               <Data>
                 <r>
-                  <c>byg59k_k_0_ch28y3ybhdbuxfzkdnzacdu8frq</c>
+                  <c>fwfwfdwf</c>
                   <c>bnskksae5</c>
                   <c>322</c>
                 </r>
