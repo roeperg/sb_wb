@@ -1,0 +1,1121 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Name" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Name" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Name" selected="True" rename="Right_Name" input="Right_" />
+                <SelectField field="Right_Type" selected="True" rename="Right_Type" input="Right_" />
+                <SelectField field="Right_Size" selected="True" rename="Right_Size" input="Right_" />
+                <SelectField field="Right_Scale" selected="True" rename="Right_Scale" input="Right_" />
+                <SelectField field="Right_Source" selected="True" rename="Right_Source" input="Right_" />
+                <SelectField field="Right_Description" selected="True" rename="Right_Description" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="612" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Name" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Name - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1098" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Name" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="510" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsInteger([Prefix])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsInteger([Prefix])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="408" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="GetPart([Name], &quot;.&quot;, 0)" field="Prefix" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Prefix = GetPart([Name], ".", 0)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="714" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Name</FieldFind>
+          <FieldSearch>currvalue</FieldSearch>
+          <ReplaceFoundField>newvalue</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="546" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="currvalue" />
+            <Field name="newvalue" />
+          </Fields>
+          <Data>
+            <r>
+              <c>4.value.email</c>
+              <c>Record Owner</c>
+            </r>
+            <r>
+              <c>5.value.email</c>
+              <c>Last Modified By</c>
+            </r>
+            <r>
+              <c>11.value.email</c>
+              <c>Category Manager</c>
+            </r>
+            <r>
+              <c>31.value.email</c>
+              <c>Category Manager - NEW Formula</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsInteger([Prefix])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsInteger([Prefix])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="816" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="GetPart([Name], &quot;.&quot;, 0)" field="Prefix" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Prefix = GetPart([Name], ".", 0)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1020" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="124" y="905" width="745" height="229" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 61</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="354" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Name" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Name - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="246" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsInteger([Prefix])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>IsInteger([Prefix])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="149" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="GetPart([Name], &quot;.&quot;, 0)" field="Prefix" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Prefix = GetPart([Name], ".", 0)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="56">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="474" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>Name</FieldFind>
+              <FieldSearch>currvalue</FieldSearch>
+              <ReplaceFoundField>newvalue</ReplaceFoundField>
+              <FindMode>FindAny</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Replace</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+            <Position x="306" y="1050" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <NumRows value="4" />
+              <Fields>
+                <Field name="currvalue" />
+                <Field name="newvalue" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>4.value.email</c>
+                  <c>Record Owner</c>
+                </r>
+                <r>
+                  <c>5.value.email</c>
+                  <c>Last Modified By</c>
+                </r>
+                <r>
+                  <c>11.value.email</c>
+                  <c>Category Manager</c>
+                </r>
+                <r>
+                  <c>31.value.email</c>
+                  <c>Category Manager - NEW Formula</c>
+                </r>
+              </Data>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+        </Node>
+        <Node ToolID="58">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="666" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>IsInteger([Prefix])</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>IsInteger([Prefix])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="59">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="570" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="GetPart([Name], &quot;.&quot;, 0)" field="Prefix" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Prefix = GetPart([Name], ".", 0)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="60">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+            <Position x="786" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <ByName_ErrorMode>Warning</ByName_ErrorMode>
+              <ByName_OutputMode>All</ByName_OutputMode>
+              <Mode>ByName</Mode>
+              <SetOutputOrder value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="324" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Name" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Name" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Name" selected="True" rename="Right_Name" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\coupa_purchase_categories_r2.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>coupa_purchase_categories_r2.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date Created" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager" source="PythonTool:" type="Double" />
+            <Field name="Level 1" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level 2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Date Modified" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level 3" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager - List" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Coupa Level 3 ID" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 1" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 3" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 4" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Region" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="KEY - Coupa ID &amp; Region" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Vlook - Category Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Record ID#" source="PythonTool:" type="Int64" />
+            <Field name="31.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Project records" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Add Project" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Project records2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Add Project2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Current_category" source="PythonTool:" type="Bool" />
+            <Field name="4.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Account Code" source="PythonTool:" type="Double" />
+            <Field name="Purchase Category" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager - NEW Formula" source="PythonTool:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_29964_3fb8033dabe0447ca372fa49c8ce6440_\Engine_29964_fc1252d038085643baf8b3802ce0a3ce~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FieldInfo.FieldInfo">
+        <Position x="306" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFieldInfo" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="101" y="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\data1.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data1.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sector" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Account Code" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Purchase Category" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Coupa Level 3 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Region" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Current_category" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="166" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_29964_3fb8033dabe0447ca372fa49c8ce6440_\Engine_29964_1abe45c6f682514384e1f824ad989370~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FieldInfo.FieldInfo">
+        <Position x="306" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFieldInfo" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="101" y="324" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\data2.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data2.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Update Summary" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="OLD" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Intui Level 1 &#xA;(MKTG-LG-09)" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit Level 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit Level 3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="CONCAT" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit's Previous Account" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="OLD COUPA CODE" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="New code" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New Account for Intuit &amp; CK" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="VLOOKUP" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Commodity Lead" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Commodity Description" size="707" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="297" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_29964_3fb8033dabe0447ca372fa49c8ce6440_\Engine_29964_ebb8205ed9f3514c905a5f443b339a14~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FieldInfo.FieldInfo">
+        <Position x="306" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFieldInfo" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="453" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\data3.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data3.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="OORDER" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Parent 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Parent 1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Commodity" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Parent 1 ID_Level 3 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Parent 2 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Commodity ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="LOOKUP NAME" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="CODE LOOKUP" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Commodity ID2" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="ACCOUNT" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="F12" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F13" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F14" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F15" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F16" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F17" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F18" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F19" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F20" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F21" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F22" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F23" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F24" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F25" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F26" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="428" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_29964_3fb8033dabe0447ca372fa49c8ce6440_\Engine_29964_d1e5aacf5fdc104d8bd10c570247a191~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints />
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FieldInfo.FieldInfo">
+        <Position x="306" y="449" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFieldInfo" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="101" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\data4.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>data4.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sector" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Coupa Level 3 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="Double" />
+            <Field name="Purchase Category" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_29964_3fb8033dabe0447ca372fa49c8ce6440_\Engine_29964_d4801a6cab11634f9a1ac9eaa96bc746~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FieldInfo.FieldInfo">
+        <Position x="306" y="581" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFieldInfo" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="453" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Name" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Name" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Name" selected="True" rename="Right_Name" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="64">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1098" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Name" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Name" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Name" selected="True" rename="Right_Name" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="46" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="46" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="37" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="37" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="62" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="62" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="63" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="63" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="64" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="64" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="True" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="44" Connection="False" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="50" Connection="False" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="56" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="56" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="True" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="54" Connection="False" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="58" Connection="False" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>input_nodes_purchase_category_update_R2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3592108d-ecd0-4db5-926e-21f81b2271d4" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="3592108d-ecd0-4db5-926e-21f81b2271d4" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

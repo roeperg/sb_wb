@@ -1,0 +1,531 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\coupa_purchase_categories_r2.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>coupa_purchase_categories_r2.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date Created" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager" source="PythonTool:" type="Double" />
+            <Field name="Level 1" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level 2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Date Modified" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Level 3" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager - List" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Coupa Level 3 ID" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 1" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 3" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="CATEGORY MANAGER 4" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Region" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="KEY - Coupa ID &amp; Region" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Vlook - Category Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Record ID#" source="PythonTool:" type="Int64" />
+            <Field name="31.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Project records" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Add Project" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Project records2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Add Project2" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Current_category" source="PythonTool:" type="Bool" />
+            <Field name="4.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="4.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="5.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Account Code" source="PythonTool:" type="Double" />
+            <Field name="Purchase Category" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="31.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="11.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Category Manager - NEW Formula" source="PythonTool:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Record ID#" selected="True" />
+            <SelectField field="Sector" selected="True" />
+            <SelectField field="Account Code" selected="True" />
+            <SelectField field="Purchase Category" selected="True" />
+            <SelectField field="Level 1" selected="True" />
+            <SelectField field="Level 2" selected="True" />
+            <SelectField field="Level 3" selected="True" />
+            <SelectField field="Coupa Level 3 ID" selected="True" type="Double" size="8" />
+            <SelectField field="Region" selected="True" type="Double" size="8" />
+            <SelectField field="Current_category" selected="True" />
+            <SelectField field="Date Created" selected="False" />
+            <SelectField field="Category Manager" selected="False" />
+            <SelectField field="Date Modified" selected="False" />
+            <SelectField field="Category Manager - List" selected="False" />
+            <SelectField field="CATEGORY MANAGER 1" selected="False" />
+            <SelectField field="CATEGORY MANAGER 2" selected="False" />
+            <SelectField field="CATEGORY MANAGER 3" selected="False" />
+            <SelectField field="CATEGORY MANAGER 4" selected="False" />
+            <SelectField field="KEY - Coupa ID &amp; Region" selected="False" />
+            <SelectField field="Vlook - Category Manager" selected="False" />
+            <SelectField field="31.value.email" selected="False" />
+            <SelectField field="31.value.id" selected="False" />
+            <SelectField field="31.value.name" selected="False" />
+            <SelectField field="Project records" selected="False" />
+            <SelectField field="Add Project" selected="False" />
+            <SelectField field="Project records2" selected="False" />
+            <SelectField field="Add Project2" selected="False" />
+            <SelectField field="4.value.email" selected="False" />
+            <SelectField field="4.value.id" selected="False" />
+            <SelectField field="4.value.name" selected="False" />
+            <SelectField field="4.value.userName" selected="False" />
+            <SelectField field="5.value.email" selected="False" />
+            <SelectField field="5.value.id" selected="False" />
+            <SelectField field="5.value.name" selected="False" />
+            <SelectField field="5.value.userName" selected="False" />
+            <SelectField field="31.value.userName" selected="False" />
+            <SelectField field="11.value.email" selected="False" />
+            <SelectField field="11.value.id" selected="False" />
+            <SelectField field="11.value.name" selected="False" />
+            <SelectField field="11.value.userName" selected="False" />
+            <SelectField field="Category Manager - NEW Formula" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="366" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Record ID#" action="GroupBy" rename="Record ID#" />
+            <SummarizeField field="Sector" action="GroupBy" rename="Sector" />
+            <SummarizeField field="Account Code" action="GroupBy" rename="Account Code" />
+            <SummarizeField field="Purchase Category" action="GroupBy" rename="Purchase Category" />
+            <SummarizeField field="Level 1" action="GroupBy" rename="Level 1" />
+            <SummarizeField field="Level 2" action="GroupBy" rename="Level 2" />
+            <SummarizeField field="Level 3" action="GroupBy" rename="Level 3" />
+            <SummarizeField field="Coupa Level 3 ID" action="GroupBy" rename="Coupa Level 3 ID" />
+            <SummarizeField field="Region" action="GroupBy" rename="Region" />
+            <SummarizeField field="Current_category" action="GroupBy" rename="Current_category" />
+            <SummarizeField field="Current_category" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>LOAD</AnnotationText>
+          <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=`LOAD$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sector" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Account Code" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Purchase Category" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Coupa Level 3 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Region" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Current_category" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`LOAD$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Current_category" selected="True" type="Bool" size="1" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="366" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Sector" action="GroupBy" rename="Sector" />
+            <SummarizeField field="Account Code" action="GroupBy" rename="Account Code" />
+            <SummarizeField field="Purchase Category" action="GroupBy" rename="Purchase Category" />
+            <SummarizeField field="Level 1" action="GroupBy" rename="Level 1" />
+            <SummarizeField field="Level 2" action="GroupBy" rename="Level 2" />
+            <SummarizeField field="Level 3" action="GroupBy" rename="Level 3" />
+            <SummarizeField field="Coupa Level 3 ID" action="GroupBy" rename="Coupa Level 3 ID" />
+            <SummarizeField field="Region" action="GroupBy" rename="Region" />
+            <SummarizeField field="Current_category" action="GroupBy" rename="Current_category" />
+            <SummarizeField field="Current_category" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="630" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Sector" />
+            <Field field="Account Code" />
+            <Field field="Purchase Category" />
+            <Field field="Level 1" />
+            <Field field="Level 2" />
+            <Field field="Level 3" />
+            <Field field="Coupa Level 3 ID" />
+            <Field field="Region" />
+            <Field field="Current_category" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Sector" />
+            <Field field="Account Code" />
+            <Field field="Purchase Category" />
+            <Field field="Level 1" />
+            <Field field="Level 2" />
+            <Field field="Level 3" />
+            <Field field="Coupa Level 3 ID" />
+            <Field field="Region" />
+            <Field field="Current_category" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Sector" selected="True" rename="Right_Sector" input="Right_" />
+                <SelectField field="Right_Account Code" selected="True" rename="Right_Account Code" input="Right_" />
+                <SelectField field="Right_Purchase Category" selected="True" rename="Right_Purchase Category" input="Right_" />
+                <SelectField field="Right_Level 1" selected="True" rename="Right_Level 1" input="Right_" />
+                <SelectField field="Right_Level 2" selected="True" rename="Right_Level 2" input="Right_" />
+                <SelectField field="Right_Level 3" selected="True" rename="Right_Level 3" input="Right_" />
+                <SelectField field="Right_Coupa Level 3 ID" selected="True" rename="Right_Coupa Level 3 ID" input="Right_" />
+                <SelectField field="Right_Region" selected="True" rename="Right_Region" input="Right_" />
+                <SelectField field="Right_Current_category" selected="True" rename="Right_Current_category" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Summary of change$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Summary of change</AnnotationText>
+          <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=`Summary of change$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Summary of change$`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Current_category" selected="True" type="Bool" size="1" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Sheet1</AnnotationText>
+          <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Update Summary" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="OLD" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Intui Level 1 &#xA;(MKTG-LG-09)" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit Level 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit Level 3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="CONCAT" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Intuit's Previous Account" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="OLD COUPA CODE" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="New code" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New L3" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="New Account for Intuit &amp; CK" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="VLOOKUP" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Commodity Lead" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Commodity Description" size="707" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Sheet1$`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=`Test_Coupa_Purchase_Categor...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="OORDER" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Parent 2" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Parent 1" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Commodity" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Parent 1 ID_Level 3 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Parent 2 ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="Commodity ID" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="LOOKUP NAME" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="CODE LOOKUP" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="Commodity ID2" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="ACCOUNT" size="255" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+            <Field name="F12" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F13" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F14" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F15" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F16" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F17" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F18" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F19" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F20" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F21" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F22" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F23" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F24" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F25" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+            <Field name="F26" source="File: G:\Shared drives\GBS Data &amp; Analytics\CMAPP Ref\NEW PURCH CATEGORIES FORMATTING FINAL.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>purchase_category_update</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="526a3fad-9dc5-4cb5-bb39-e41b4e637f81" />
+      <Telemetry>
+        <PreviousWorkflowId value="77898b49-d0eb-4ef3-823d-fc0bdb8339d1" />
+        <OriginWorkflowId value="77898b49-d0eb-4ef3-823d-fc0bdb8339d1" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,1764 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_35768_df21fc96a824498bb6db5f51e2d58bf9_\Engine_35768_aa8abbeaef806045a797e9bde25dd8f2~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="558" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Purchase Category" action="GroupBy" rename="Purchase Category" />
+            <SummarizeField field="Purchase Category - Record ID#" action="GroupBy" rename="Purchase Category - Record ID#" />
+            <SummarizeField field="Purchase Category - Record ID#" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="666" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Purchase Category" action="GroupBy" rename="Purchase Category" />
+            <SummarizeField field="Purchase Category" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="630" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Purchase Category</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-11-24 11:48:29</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Professional Services.Candidate Recruitment</Operand>
+              <StartDate>2024-11-24 11:48:29</StartDate>
+              <EndDate>2024-11-24 11:48:29</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Purchase Category] = "Professional Services.Candidate Recruitment"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="666" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_35768_df21fc96a824498bb6db5f51e2d58bf9_\Engine_35768_addc3e091576bf40a21d0d7ef1a71657~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="654" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="cmapp_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Record ID#" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Purchase Category - Record ID#" selected="False" input="Left_" />
+                <SelectField field="Right_record_id" selected="False" input="Right_" />
+                <SelectField field="Left_Related Purchase Category" selected="False" input="Left_" />
+                <SelectField field="Left_Purchase Category - Account Code" selected="False" input="Left_" />
+                <SelectField field="Left_Purchase Category - Sector" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="810" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="822" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotEmpty</Operator>
+            <Field>Products</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-11-24 15:00:24</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2024-11-24 15:00:24</StartDate>
+              <EndDate>2024-11-24 15:00:24</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsEmpty([Products])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1157" y="221" width="217" height="325" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 49</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1182" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Record ID#" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="record_id" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1182" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Record ID#" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="record_id" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1290" y="462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Record ID#" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="record_id" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="41" y="473" width="453" height="252" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>CMAPP</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>CMAPP</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="66" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\projects_table.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>projects_table.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date Created" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Notes" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Finance Approver" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU / FG Final Approver" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Finance Manager BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 1 BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2 BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Agreement" source="PythonTool:" type="Double" />
+                <Field name="Reviewer 1 BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2 BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU / FG Final Approver BU / FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Finance Manager Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 1 Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2 Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 1 Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2 Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU / FG Final Approver - Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Finance Manager Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Link to MSA" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 1 Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2 Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 1 Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2 Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU / FG Final Approver - Non Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Finance Manager (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 1 (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2 (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 1 (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2 (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Highly Sensitive" source="PythonTool:" type="Bool" />
+                <Field name="BU / FG Final Approver (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Step 3B -  Category Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Step 3E - CFO Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver 2 Approval Date DELETE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 1 Approval Date delete" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reviewer 2 Approval Date DELETE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Step 3D - CPO Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Duration" source="PythonTool:" type="Double" />
+                <Field name="Spends" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement Expiration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Category Leader" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Purchase Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Purchase Sub-Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - # of Projects" source="PythonTool:" type="Double" />
+                <Field name="Add Spend" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Outside Services Sub-Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Services Sector Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Technology Sector Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sector &amp; Sub-Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Supplier - # of &quot;Completed&quot; Inherent risk screenings" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Combined Supplier Status (IRSR / MSA)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Purchase requests" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Purchase Request" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total All PR Line Items ($)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Savings have an R2R reallocation opportunity" source="PythonTool:" type="Bool" />
+                <Field name="Contract Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MSA - Payment Terms" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Risk Screening / 3PSA - Data Sharing Overview" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Requestor" source="PythonTool:" type="Double" />
+                <Field name="Total Spend Amount ($)" source="PythonTool:" type="Double" />
+                <Field name="Type of Savings" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Soft Savings Details" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Supplier ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Inherent Risk Screening" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Overall Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract Effective Start Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - 3PSA  Required?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Applicable Inherent Risk Screening" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select the Tier1 Data Elements to be Shared" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select the Tier2 Data Elements to be Shared" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select Business Data Elements" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select Personal Characteristics Data Elements" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select Personal Financial Data Elements" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Select Personal Identification Data Elements" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract Expiration Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - IIS 3PSA Review Completed Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - IRS Completed By" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requires NEW Inherent Risk Screening" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract has auto renewal clause?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="196.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="196.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="196.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Awaiting Inherent Risk Screening to be Completed?" source="PythonTool:" type="Bool" />
+                <Field name="Date Modified" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Documents" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Spend Amount 2018" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Savings ($)- 2018" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Intuit Contracting Entity" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Ariba Upload Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Ariba - Need Additional Info" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Country" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Notify Buyers Team of PR Changes (Adds Current Date / Time)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="# of Purchase requests" source="PythonTool:" type="Double" />
+                <Field name="Date Added to Ariba" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Document" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="More Info POC" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="View in Ariba" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Users who can view Highly Sensitive Project" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier Not Listed - Use Temporary Supplier Name" source="PythonTool:" type="Bool" />
+                <Field name="Temporary Supplier Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Buyer Process Status (Link to IBM App)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Buyers/Approvers: Justification Details" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PR Number" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Driver - DELETE OR REUSE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PO Number# Link - Import from IBM Dashboard" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Unique Value (Link to IBM App)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add in Additional Business Reviewer(s)?" source="PythonTool:" type="Bool" />
+                <Field name="Business Driver's Initials." size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Driver Initial Log" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Director Approval Button" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Finance Manager Reject Button" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="228.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="228.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="228.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Start BU Approval Chain" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Marketing Sector Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="# of Incomplete PR's" source="PythonTool:" type="Double" />
+                <Field name="Ariba - Employee / Customer Data Shared?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Risk Screening Record ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Link to Review for Sourcing Approval Forms" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Is this contract under one budget cost center (CGD)?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU/FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Oracle ID" source="PythonTool:" type="Double" />
+                <Field name="Low-Edge Sourcing?" source="PythonTool:" type="Bool" />
+                <Field name="Intuit or 3rd Party IP shared or provided?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Highest Accessed / Shared Data Tier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Send IRS Link to User" source="PythonTool:" type="Bool" />
+                <Field name="Need Reminder of Expiration?" source="PythonTool:" type="Bool" />
+                <Field name="Renewal Reminder (# of days prior to expiration)" source="PythonTool:" type="Double" />
+                <Field name="Initial CDS Review Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Reminder Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related 3PRM Supplier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3PRM Supplier - Oracle ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Oracle ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Master Agreement Document Selector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="# of Engagements (Snapshot)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aging" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Minimum PR Date Created" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Short Description Entry" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PR / PO Unique Key Prefix" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Unique Key for Relating PO#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Purchase orders" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Start Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Link to BU Approval Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="IRS Screening Request Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester Email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Avg Spend Amount per Year" source="PythonTool:" type="Double" />
+                <Field name="View in Pipeline Reporting?" source="PythonTool:" type="Bool" />
+                <Field name="Project End Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Link to Original Record" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Document Source" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="There is a lease in the contract" source="PythonTool:" type="Bool" />
+                <Field name="Executive Summary" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="290.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="290.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="290.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Strategic Sourcing Status Update" source="PythonTool:" type="Bool" />
+                <Field name="In-line with your category strategy" source="PythonTool:" type="Bool" />
+                <Field name="Driver Est. FTE Hrs" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Support Est. FTE Hrs" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Existing Suppliers in Review" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Last time this supplier / space was bid" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="$ Estimated Annual Negotiable Spend" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="$ Total Estimated Annual Savings / Avoidance" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Non monetary value add" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Record ID#" source="PythonTool:" type="Int64" />
+                <Field name="CDS Required?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="% Estimated Annual Savings / Avoidance" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="In-Year Estimated Savings $" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="In-Year Estimated Avoidance $" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Initial Stakeholder Meeting" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="1. Analyze Spend / Opportunity" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="2. Develop Sourcing Strategy" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3. Execute Sourcing Strategy" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4. Negotiate and Validate Savings" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="5. Award Contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Legal Resource" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Estimated Spend Unavailable" source="PythonTool:" type="Bool" />
+                <Field name="Finance Lead Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Savings Start Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Savings End Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Negotiated Est. Annual Savings %" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Negotiated Est. Annual Avoidance %" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Major Contributor" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Spend Amount (USD)" source="PythonTool:" type="Double" />
+                <Field name="Qlik reporting check" source="PythonTool:" type="Bool" />
+                <Field name="Related Project" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Currency" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Projects" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Project" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Payment Terms" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Is there a right to cancel or terminate the agreement for convenience?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Minimum Commitment Check" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Is there a termination fee or payment guarantee upon cancelation/terminations?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Is the termination fee and/or payment guarantee &gt; $250,000?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Is there a fixed or minimum quantity and a fixed, minimum or variable price in the contract?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="&gt;$250k Check" source="PythonTool:" type="Bool" />
+                <Field name="Cost savings" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Overview:" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="contract duraction" source="PythonTool:" type="Double" />
+                <Field name="CMAPP Link" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Savings (USD)" source="PythonTool:" type="Double" />
+                <Field name="Using Intuit paper" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project_Complexity" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Leadership Pipeline Notes" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BU / FG - Fully Approved?" source="PythonTool:" type="Bool" />
+                <Field name="Sourcing Approval Chain - Fully Approved?" source="PythonTool:" type="Bool" />
+                <Field name="Add Cost Saving" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Accounting Resource Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related party transaction" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Resend CDS to" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Close Year" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Copy Record" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Close Month" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Records" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Custom milestones &amp;  reminders" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Create custom reminder emails" source="PythonTool:" type="Bool" />
+                <Field name="Contract Decision Summary Required?" source="PythonTool:" type="Bool" />
+                <Field name="Key Financial Impact Considerations" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="351.value.url" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="351.value.versions" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Approved CDS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Link to the old CDS Tab" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Combined Text Executed Contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Executed Contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Start to Today" source="PythonTool:" type="Double" />
+                <Field name="Contract Currently Active" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sub-Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Stage employee is at" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier from employee" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Budget bucket" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="New or Renewal from employee" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Renewal date from employee" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="368.value.url" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="368.value.versions" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee submitted from online form" source="PythonTool:" type="Bool" />
+                <Field name="Contract Signed Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Region Count" source="PythonTool:" type="Double" />
+                <Field name="International Sourcing" source="PythonTool:" type="Bool" />
+                <Field name="Overwrite international and route to Sector Lead" source="PythonTool:" type="Bool" />
+                <Field name="Project Closed - FY" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Process Tracking" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="5. Complete - Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Special Project for Exhibit &amp; Contract Changes" source="PythonTool:" type="Bool" />
+                <Field name="1. Contract research - Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="2. Amendment sent to supplier - Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Renewal Required?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3.2 Redline in review with legal" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4. Sent for signatures - Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="1. Contract Research duration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="2. Amendment with supplier duration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3.2 Redline in Review with Legal Duration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4. Signatures duration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total aging" source="PythonTool:" type="Double" />
+                <Field name="Agreement - Effective Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Inherent Risk Screening - Most Recent IRS / 3PSA?" source="PythonTool:" type="Bool" />
+                <Field name="Spend Bucket" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="No modification agins" source="PythonTool:" type="Int64" />
+                <Field name="Related Sector ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Start Fiscal" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Denali is driving" source="PythonTool:" type="Bool" />
+                <Field name="CDS Expectations" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CCPA Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3.1 Guidance / decision needed from legal" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3.1 Guidance from Legal Duration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CCPA Status Icon" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Steps to move the project forward" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Contract Research Completed (4 days)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Redlines Received from Supplier (10 days)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Guidance / Decision from Legal (4 days)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Redline Complete from Legal (10 days)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Execute Contract (4 days)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Target Complete" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aging in current step" source="PythonTool:" type="Double" />
+                <Field name="Executed Contract Link" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Date / Time Ready for Ariba" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Date more information was requested" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fiscal Expiration" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Evergreen?" source="PythonTool:" type="Bool" />
+                <Field name="Expiration Month" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3PRM Supplier - 3P Supplier Record ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3PRM Supplier - Record ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fiscal Effective" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="effective qtr builder" source="PythonTool:" type="Double" />
+                <Field name="Effective Quarter" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fiscal Cost Reduction" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fiscal Cost Avoidance" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Annual Cost Avoidance" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Annual Cost Reduction" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Approval Step 1 - Send to Sector Lead for Initial Review / Approval" source="PythonTool:" type="Bool" />
+                <Field name="Fiscal Cost Avoidance (USD)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fiscal Cost Reduction (USD)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Annual Cost Avoidance (USD)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Annual Cost Reduction (USD)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract spend per day" source="PythonTool:" type="Double" />
+                <Field name="Annualized spend" source="PythonTool:" type="Double" />
+                <Field name="Fiscal Spend" source="PythonTool:" type="Double" />
+                <Field name="Use Case" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3PRM Supplier - Partner Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Phase" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="FY (Start of Savings)" source="PythonTool:" type="Double" />
+                <Field name="Intuit or Denali" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Evergreen" source="PythonTool:" type="Bool" />
+                <Field name="GBS Savings Initiative" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Support Complexity" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Process Steps" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Region" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Service Start Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Cancellation Notice Clause" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aravo Engagement ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aravo Engagement Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Need or Requirement" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract sent to P2P?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="FY21 Planned Savings" source="PythonTool:" type="Bool" />
+                <Field name="Validated by CI?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Common ID for Multiple projects" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Phase Bucket" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Date Created - Filter" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="New Supplier?" source="PythonTool:" type="Bool" />
+                <Field name="Solution Alternatives and Selection Process" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Autorenew_Language" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Service End Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PO_Amount" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Solution Recommendation" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Data_Sharing" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Legal_Support_Req" source="PythonTool:" type="Bool" />
+                <Field name="COSA_Review" source="PythonTool:" type="Bool" />
+                <Field name="MSA Record ID#" source="PythonTool:" type="Double" />
+                <Field name="Related Requester CGD" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester CGD - User" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester CGD - Requester" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Price Justification" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester CGD - CGD" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Item Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="FOB_Point" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement_Paper_Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="RFP_Information" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Min_Commitment" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Prepay_Purch" source="PythonTool:" type="Bool" />
+                <Field name="Fixed_Assets" source="PythonTool:" type="Bool" />
+                <Field name="Billing_Consolidator" source="PythonTool:" type="Bool" />
+                <Field name="Hedging_or_Derivative" source="PythonTool:" type="Bool" />
+                <Field name="5.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="5.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="5.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="5.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Risks" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Lease_or_Embd_Lease" source="PythonTool:" type="Bool" />
+                <Field name="Outsrcd_Acctg_Svcs" source="PythonTool:" type="Bool" />
+                <Field name="Retailer_Distributor" source="PythonTool:" type="Bool" />
+                <Field name="Rev_Share_Recvd" source="PythonTool:" type="Bool" />
+                <Field name="Supplier_Wht_Labeled" source="PythonTool:" type="Bool" />
+                <Field name="Perpetual_Licenses" source="PythonTool:" type="Bool" />
+                <Field name="Sensitive Data" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Products" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Product" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Termination_Length_of_Notice" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Indemnity_Cap" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Renewal_length_notice" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="New_Software" source="PythonTool:" type="Bool" />
+                <Field name="Contract_Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Whether the data shared is Tier 1 (Highly Sensitive or Secret) or Tier 2 (Sensitive):" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Renewal_Required" source="PythonTool:" type="Bool" />
+                <Field name="Upload_Contract_Here" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Upload_CDS_Here" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Employee" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - Legal Full Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - CGD" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - BU/FG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Data elements shared - possible delete" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category" source="PythonTool:" type="Double" />
+                <Field name="Purchase Category - Account Code" source="PythonTool:" type="Double" />
+                <Field name="Purchase Category - Category Manager" source="PythonTool:" type="Double" />
+                <Field name="Purchase Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Purchase Category - Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGDA" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Intuit Contracting Entity" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Prod_Country_of_Origin" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Date 3rd Party Security Assessment (3PSA) Completed - POSSIBLE DELETE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Termination_Requirement" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Voluntary_Termination" source="PythonTool:" type="Bool" />
+                <Field name="Termination_Convenience" source="PythonTool:" type="Bool" />
+                <Field name="Termination_Fee" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LOL_Cap" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LOL_Exceptions" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGD 2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGD 3" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGD 4" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGD 5" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGD 6" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Multiple_CGDs" source="PythonTool:" type="Bool" />
+                <Field name="CGDA 2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGDA 3" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGDA 4" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGDA 5" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CGDA 6" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Key Terms" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Override_CGD" source="PythonTool:" type="Bool" />
+                <Field name="CGD_Manual_Entry" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Product Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PO Number (Lookup)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PR Number (Lookup)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Budget Amount" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Financial Summary" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Actual Spend (YTD)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="# of Documents" source="PythonTool:" type="Double" />
+                <Field name="Multi-Year" source="PythonTool:" type="Bool" />
+                <Field name="Box Link to Contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Box Link to CDS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Credit_Rebates" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Cost Savings/Avoidance Calculations" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Ref_Contract_Link" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Ref_CDS_Link" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Services" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Service" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - Corporate ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="6.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="6.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="6.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="M2M_Convert" source="PythonTool:" type="Bool" />
+                <Field name="Related Contract Type" source="PythonTool:" type="Double" />
+                <Field name="Related Contract - Document Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Contract - Tags" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project End Year" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Override_Account_Code" source="PythonTool:" type="Bool" />
+                <Field name="Account_Code_Manual_Entry" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="VAR_Supplier" source="PythonTool:" type="Bool" />
+                <Field name="Create_Purch_Req" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Request_Description" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CMAPP_URL" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_Q0_NDA_Template" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_Q1_Agreement_Copy" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_Q3_Legal_Advice" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contact_Info_Preference" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_Data_Sharing" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_COSA_Review" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LCPO_Due_Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="0_Sourcing_Q_Enterprise/Prod Use" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="0_Sourcing_Q_Marketing Services" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="0_Sourcing_Q_Lending Services" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="0_Sourcing_Q_Agreement &quot;True-Up&quot;" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aravo_Record_URL" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Master agreements" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Master Agreement" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Minimum commitments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project_Driver_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Cat_Manager_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="C3_Project_Driver" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Product_Entry_Template" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Hourly_Rate_Template" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="638.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="638.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="638.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sector (Merge)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Minimum Commitment" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="640.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="640.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="640.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="642.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="642.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="642.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aravo Engagement ID (Merge)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Legal_Resource_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sector_Lead_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing_Director_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Description Of Engagement" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Business Justification" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Savings ($)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3PSA Required" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="In scope for GDPR" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="InScopeforCCPA" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SSO Required" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Data Shared" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Aravo Engagement #" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="EngagementCategory" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Notes (Formula)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - Email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Minimum Commitment Amount" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement_Owner_Text" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Services_Import" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Products_Import" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Document Type - Local" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CDS Document Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Remove from COSA Pending Report" source="PythonTool:" type="Bool" />
+                <Field name="Exhibit included in the contract" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Fy spend, savings &amp; commitmentses" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Minimum Commit Cert" source="PythonTool:" type="Bool" />
+                <Field name="Bot Upload" source="PythonTool:" type="Bool" />
+                <Field name="Project Notes (Merge)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Legal_Request" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract_Name_Certification" source="PythonTool:" type="Bool" />
+                <Field name="COUPA_ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MSA Created" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add FY Spend, Savings &amp; Commitments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Short_Description_Clean" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier_Name_Clean" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract_Name_Check" source="PythonTool:" type="Bool" />
+                <Field name="Contract Naming Certification" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement - Sourcing Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="ADDRESSED_SPEND" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project_Notes_Datalake" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Purchase Category - Record ID#" source="PythonTool:" type="Double" />
+                <Field name="ETS_Flag" source="PythonTool:" type="Bool" />
+                <Field name="Purchase Category - Level 1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Resources" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Resource" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Agreement Owner/Driver" source="PythonTool:" type="Double" />
+                <Field name="Aravo Engagement Name (Merge)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Coupa Contract ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COUPA_FLAG" source="PythonTool:" type="Bool" />
+                <Field name="COST_MODEL_TEMPLATE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COST_MODEL_BULK_IMPORT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COST_MODEL_UPLOAD_CERT1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COST_MODEL_UPLOAD_CERT2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SOW Total Cost" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Currency" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Currency - CONVERSION_RATE" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CURRENCY_NAME" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Spend Amount - USD Converted" source="PythonTool:" type="Double" />
+                <Field name="Fiscal Effective - Savings Override" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Savings - FE Override" source="PythonTool:" type="Bool" />
+                <Field name="Total Spend Converted - Time Locked" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Spend - Change Tracker" source="PythonTool:" type="Double" />
+                <Field name="Total Savings - Change Tracker" source="PythonTool:" type="Double" />
+                <Field name="Total Savings - USD Converted" source="PythonTool:" type="Double" />
+                <Field name="Total Savings Converted - Time Locked" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract ID Manual Entry" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - Third Party Identifier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - Third Party Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Engagement" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Engagement Identifier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Engagement Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Term_Convenience" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Searchable_Doc" source="PythonTool:" type="Bool" />
+                <Field name="Signature_Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Indemnity_Exception" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Shipping_Terms" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COST_AVOIDANCE_CHECK" source="PythonTool:" type="Bool" />
+                <Field name="COST_SAVINGS_CHECK" source="PythonTool:" type="Bool" />
+                <Field name="Complexity_Formula" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Late Payment Penalty" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="In-Year Fiscal Savings - Override" source="PythonTool:" type="Bool" />
+                <Field name="MSA Reference Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Renewal Override" source="PythonTool:" type="Bool" />
+                <Field name="Coupa Contract ID (Formula)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="75.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="75.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="75.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Coupa Contract Key (Concat)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contracts" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contracts2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="EngagementStatus" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Group (Formula)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COUPA_BOT_UPLOAD" source="PythonTool:" type="Bool" />
+                <Field name="Project Completion Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Category Manager / Group Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and security exhibits" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Privacy and Security Exhibit" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="0_Sourcing_Q_PSE_Request" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Contract Type - Abbreviated_Doc_Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Termination_Length_of_Notice_Ref" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Document" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Documents2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Document2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="77.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="77.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="77.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Auto-Savings Validation" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Review Complexity 1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract Confirm Complexity 2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier - Aravo Engagement ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier - Aravo Internal ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier - Third Party Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier - Record ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier - CMAPP Unique ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="78.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="78.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="78.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier - Third Party Identifier" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Supplier - Engagement Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - Active?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - ThirdPartyTypeHL" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="79.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="79.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="79.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Manager Approval Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related MSA Contract Document" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related_Agreement___3PRM_Supplier___Third_Party_Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Timestamp Notify" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Requestor Response" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Date Next Slack" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Inscope Renewal?" source="PythonTool:" type="Bool" />
+                <Field name="CRBot-Inscope Curr Slack?" source="PythonTool:" type="Bool" />
+                <Field name="CRBot-Reponse Comments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-BotNotes" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr. Sourcing Manager / Group Manager Approval Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Training?" source="PythonTool:" type="Bool" />
+                <Field name="CRBot-Reassign Contact?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Aravo BP ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Coupa ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-New CMAPP Project Record ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Performed Data Validation" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Failed Data Validation" source="PythonTool:" type="Bool" />
+                <Field name="CDS Step 3A - Project Driver Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Data Validation Comments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Validation Failure (Aravo)" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Validation Failure (Coupa)" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Validation Failure (Directory)" source="PythonTool:" type="Bool" />
+                <Field name="CRBot-New Requester Email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Coupa Preparer" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-No Renewal Required" source="PythonTool:" type="Bool" />
+                <Field name="CRBot-Project Driver" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Region" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Slack Recipient Formula" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CPO Approval Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Slack Recipient Corp ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Slack Recipient Corp ID - Email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Testing Flag" source="PythonTool:" type="Bool" />
+                <Field name="Related MSA Contract Document - MSA Document URL" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - ROW Aravo Bypass (No to all gating questions)" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Exception Msg" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Escalation Flag (-15 days to expiration)" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Escalation Message Sent" source="PythonTool:" type="Bool" />
+                <Field name="CDS Step 3C - Sourcing Director Form" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Response Received Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Previous Eng Internal ID in Coupa" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Engagement Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-For Sourcing - Previous PR good to go or keep it blank?" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Coupa ID - Status" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Coupa ID - Created Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot-Ready for Data Validation" source="PythonTool:" type="Bool" />
+                <Field name="Related Contract Type - CONTRACT_GROUPING" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Days until expiration" source="PythonTool:" type="Double" />
+                <Field name="Category Manager (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Draft PR - Notification Timestamp" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CRBot - Draft PR - Notification Required" source="PythonTool:" type="Bool" />
+                <Field name="CRBot - Draft PR Requestor Response" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - PSE_Required" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Agreement - Supplier-MA Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Agreement - Related Supplier3" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MSA_NOT_APPLICABLE" source="PythonTool:" type="Bool" />
+                <Field name="BUS_REQSTR_MNGR" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MIN_COMMIT_AMOUNT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Sourcing Manager / Group Manager (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="RELATED_PSE_SELECT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="RELATED_PSE_VERSION" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SOURCING_BYPASS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Privacy and Security Exhibit" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and Security Exhibit - Privacy Document" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and Security Exhibit - PSE Version (Effective Date)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Director (Approval Log)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and Security Exhibit - Comments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and Security Exhibit - Privacy Document Execution Date" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Privacy and Security Exhibit - PSE Document URL Link" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COMPLEXITY_OVERRIDE" source="PythonTool:" type="Bool" />
+                <Field name="Related Contract Type - COMPLEXITY" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MSA STATUS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Driver Email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CPO (Please Type Full Name)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Bot_OrderedPR_Field_Archive" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="TEST_Complexity_Derivation" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Short Description" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BOT_OrderedPR_Update Processed Flag" source="PythonTool:" type="Bool" />
+                <Field name="BUS_REQR_MNGR_SNAPSHOT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="BOT_AravoEng_Update_to_Active_Flag" source="PythonTool:" type="Bool" />
+                <Field name="CFO (Please Type Full Name)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SAM_OVERAGE_RISK" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project records" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Add Project2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CONSUMPTION_FIXED_FLAG" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SIGNED_BY" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Supplier2 - Date Modified" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Engagement - Date Modified" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester (Merge)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project_Contract_Type" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Category Manager Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Maximum Date Modified COST SAVINGS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Maximum Date Modified- YEARLY SPEND" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="LAST_MODIFIED_BY_TEXT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="FINANCE_APPROVER_TEXT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="RECORD_OWNER_TEXT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="FINANCE_LEAD_TEXT" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PROJ_CLOSED_DATE_CALC" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="PROJECT_COMPLETE_TIMESTAMP" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sector Lead Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="HISTORY_LOAD_FLAG" source="PythonTool:" type="Bool" />
+                <Field name="PROJECT_CLOSE_USER" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COUPA PR TOTAL VALUE USD" source="PythonTool:" type="Double" />
+                <Field name="COUPA PO TOTAL VALUE USD" source="PythonTool:" type="Double" />
+                <Field name="PROJECT_CLOSE_USER_SNAP" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CMAPP_REF" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Director Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COUPA VALUES" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CPO Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="COUPA SUM_PR VALUE USD" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Estimated Contract Value" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Purchase Category - Category Manager - NEW Formula" source="PythonTool:" type="Double" />
+                <Field name="Employee - Preferred Name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Account Code" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Purchase Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Category Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Level 1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CFO Approval" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Sector" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Related Purchase Category2 - Category Manager - NEW Formula" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="SIGNATURE_AUTH_BYPASS" source="PythonTool:" type="Bool" />
+                <Field name="Min Commit Attestation" source="PythonTool:" type="Bool" />
+                <Field name="Min Commit Reason Category" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Driver (Not Approved)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sr Sourcing / Group Manager (Not Approved)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Sourcing Director Rejection Notes" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CPO (Not Approved)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="CFO (Not Approved)" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="196.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="640.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="642.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Employee - User_Account" source="PythonTool:" type="Double" />
+                <Field name="70.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="70.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="70.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="169.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="169.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="169.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="169.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="101.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="101.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="101.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="102.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="102.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="102.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="76.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="76.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="76.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="104.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="104.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="104.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="104.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="105.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="105.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="105.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="105.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="106.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="106.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="106.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="534.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="534.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="534.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="932.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="932.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="932.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Requester (Merge) INPUT" source="PythonTool:" type="Double" />
+                <Field name="101.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="4.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="70.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="75.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="102.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="309.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="309.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="309.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="228.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="6.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="638.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="309.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="315.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="315.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="315.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="210.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="210.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="210.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="315.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="210.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Project Driver" source="PythonTool:" type="Double" />
+                <Field name="106.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="310.value.email" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="310.value.id" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="310.value.name" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="310.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="534.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="932.value.userName" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Category Manager - CDS" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Category Manager" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Category Manager _Merge_" source="PythonTool:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="222" y="522" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_35768_df21fc96a824498bb6db5f51e2d58bf9_\Engine_35768_24e40619fb1d4647af7bcfc23ca2078d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="178" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Record ID#" selected="True" />
+                <SelectField field="Purchase Category" selected="True" />
+                <SelectField field="Purchase Category - Record ID#" selected="True" />
+                <SelectField field="Purchase Category - Level 1" selected="True" />
+                <SelectField field="Related Purchase Category2 - Level 1" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="402" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotEmpty</Operator>
+                <Field>Purchase Category</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2024-11-24 11:39:01</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>
+                  </Operand>
+                  <StartDate>2024-11-24 11:39:01</StartDate>
+                  <EndDate>2024-11-24 11:39:01</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsEmpty([Purchase Category])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings>
+            <Position x="290" y="594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"Record ID#","Purchase Category","Purchase Category - Record ID#"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="41" y="100" width="476" height="300" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>DLPRD</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DLPRD</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="66" y="149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\fin_coupa_src.coupa_req_hdr.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>fin_coupa_src.coupa_req_hdr.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="record_type" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="requisition_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="submitted_at_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="status" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="buyer_note" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="justification" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="reject_reason" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="total" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+                <Field name="currency_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="requested_by_employee_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="requested_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="requested_by_email" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="department" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_street_1" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_street_2" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_city" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_state" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_postal_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_country_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_attention" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="ship_to_address_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ship_to_address_location_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="created_at_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="updated_at_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="approved_by_employee_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="approved_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="approved_by_email" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="created_by_employee_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="created_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="created_by_email" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="updated_by_employee_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="updated_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="updated_by_email" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="cmapp_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="prm3_engagement_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="project_driver" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="need_by_date" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="current_approver" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="does_the_following_statement_apply" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="do_any1_of_the_below_statements_apply" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="do_any_of_the_below_statements_apply" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="tags" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="doesthefollowingstatementapply" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="buy_desk_project_driver_full_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="previous_pr_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="fieldglass_wo_jira" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="sourcing_group_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ingest_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="402" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>cmapp_id</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2024-11-24 10:20:11</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>0</Operand>
+                  <StartDate>2024-11-24 10:20:11</StartDate>
+                  <EndDate>2024-11-24 10:20:11</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[cmapp_id] &gt; 0</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="178" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="requisition_id" selected="True" />
+                <SelectField field="cmapp_id" selected="True" type="Int64" size="8" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="66" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\groeper\Development\Alteryx\Workflows\YXDB\dlprd.fin_coupa_src.coupa_contract.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>dlprd.fin_coupa_src.coupa_contract.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="contract" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="content_groups" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="status" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="supplier" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="supplier_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="supplier_account" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="starts" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="expires" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="owner" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="owner_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="currency_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="savings" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+                <Field name="version" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="created_by" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="created_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="created_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="updated_by" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="updated_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="updated_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="submitted_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="submitted_by" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="submitted_by_login" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="is_default" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="default_account_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="default_account_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="linked_projects" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="linked_events" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="cmapp_id" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_effective_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="contract_expiration_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="contract_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+                <Field name="contract_type_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_type_custom_field_4" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_type_custom_field_5" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_type_custom_field_7" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_type_custom_field_8" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="contract_type_custom_field_9" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="source" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="currency" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="department" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="description" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="execution_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="maximum_value" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+                <Field name="minimum_value" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+                <Field name="order_window" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="payment_term" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="published_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+                <Field name="savings_pct" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="shipping_term" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="stop_spend_based_on_max_value" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="submitter" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="supplier_account_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="supplier_display_name" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="supplier_status" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="tags" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="legal_agreement" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="attachments" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+                <Field name="ingest_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="178" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="cmapp_id" selected="True" type="Int64" size="8" />
+                <SelectField field="source" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="402" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>&gt;</Operator>
+                <Field>cmapp_id</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2024-11-24 10:20:11</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>0</Operand>
+                  <StartDate>2024-11-24 10:20:11</StartDate>
+                  <EndDate>2024-11-24 10:20:11</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[cmapp_id] &gt; 0</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings>
+            <Position x="290" y="150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"requisition_id","cmapp_id"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings>
+            <Position x="290" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"cmapp_id","source"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Join" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="52" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="29" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="True" />
+      <Destination ToolID="29" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output26" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output26" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="50" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="51" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="True" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output26" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output26" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>missing_purchase_cats</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="45d9576a-4354-4055-aeae-be427334f65e" />
+      <Telemetry>
+        <PreviousWorkflowId value="077ddfd2-08e9-41a0-9fa1-558f6d01de61" />
+        <OriginWorkflowId value="077ddfd2-08e9-41a0-9fa1-558f6d01de61" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
