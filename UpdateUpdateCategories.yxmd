@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="129" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_15644_efaf70ced77f441280480dd9f90e1886_\Engine_15644_8fb0d57a54d6cd43bb38127725867649~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||SHEET1</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=SHEET1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Update Summary" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="OLD" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="Double" />
+            <Field name="Intui Level 1 &#xA;(MKTG-LG-09)" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="Intuit Level 2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="Intuit Level 3" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="CONCAT" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="Intuit's Previous Account" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="OLD COUPA CODE" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="Double" />
+            <Field name="New code" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="New L1" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="New L2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="New L3" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="New Account for Intuit &amp; CK" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="VLOOKUP" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="Commodity Lead" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_String" />
+            <Field name="Commodity Description" size="707" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||SHEET1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="246" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||`Consolidated new$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PurchCat.xlsx
+Query=`Consolidated new$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lookup to NEW SHEET" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="CODE" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="New L1" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="New L2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="New L3" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="New Account for Intuit &amp; CK" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="LOOKUP TO COUPA FORMAT" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="CODE2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="LOOKUP COUPA COMMODITY CODE" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="New Account for Intuit &amp; CK2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="V_String" />
+            <Field name="F11" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F12" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F13" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F14" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F15" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F16" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F17" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F18" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F19" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F20" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F21" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F22" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F23" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F24" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F25" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+            <Field name="F26" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Consolidated new$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||`LOAD$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PurchCat.xlsx
+Query=`LOAD$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sector" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Account Code" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Purchase Category" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 1" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Level 3" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="V_String" />
+            <Field name="Coupa Level 3 ID" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Region" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="Double" />
+            <Field name="Current_category" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`LOAD$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="504" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PurchCat.xlsx
+Query=`FORMAT FOR NEW TAXONOMY SHE...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sector" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 1" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Level 3" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+            <Field name="Coupa Level 3 ID" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="Double" />
+            <Field name="Purchase Category" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`FORMAT FOR NEW TAXONOMY SHEET$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="278" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_15644_efaf70ced77f441280480dd9f90e1886_\Engine_15644_fe885bf90f7c0446974c745ad668806c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings>
+        <Position x="246" y="203" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="427" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_15644_efaf70ced77f441280480dd9f90e1886_\Engine_15644_539617c00376054989100c0799130bda~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings>
+        <Position x="246" y="353" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="577" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_15644_efaf70ced77f441280480dd9f90e1886_\Engine_15644_a6a854f39ee402488df89508646bff48~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings>
+        <Position x="246" y="502" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="376" y="29" width="289" height="481" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 13</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="401" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||SHEET1</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=SHEET1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Sector" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Account Code" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Purchase Category" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 1" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 2" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 3" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Coupa Level 3 ID" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Region" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Current_category" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="401" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||SHEET1</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=SHEET1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Sector" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Account Code" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Purchase Category" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 1" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 2" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 3" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Coupa Level 3 ID" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Region" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Current_category" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="402" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||SHEET1</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=SHEET1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Sector" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Account Code" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Purchase Category" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 1" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 2" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 3" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Coupa Level 3 ID" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Region" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Current_category" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="402" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||SHEET1</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NEW PURCH CATEGORIES FORMATTING FINAL.xlsx
+Query=SHEET1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Sector" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Account Code" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Purchase Category" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 1" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 2" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Level 3" size="255" source="File: PurchCat.xlsx|||SHEET1" type="V_String" />
+                <Field name="Coupa Level 3 ID" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Region" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+                <Field name="Current_category" source="File: PurchCat.xlsx|||SHEET1" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="402" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>PurchCat.xlsx
+Query=`Test_Coupa_Purchase_Categor...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="OORDER" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="Parent 2" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+                <Field name="Parent 1" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+                <Field name="Commodity" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+                <Field name="Parent 1 ID_Level 3 ID" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="Parent 2 ID" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="Commodity ID" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="LOOKUP NAME" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+                <Field name="CODE LOOKUP" size="255" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="V_String" />
+                <Field name="Commodity ID2" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="ACCOUNT" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F12" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F13" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F14" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F15" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F16" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F17" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F18" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F19" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F20" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F21" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F22" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F23" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F24" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F25" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+                <Field name="F26" source="File: C:\Users\groeper\Development\CMAPP\PurchCat.xlsx|||`Test_Coupa_Purchase_Categories_$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="582" y="426" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_15644_efaf70ced77f441280480dd9f90e1886_\Engine_15644_23580a5736f90749afe353b299069278~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings>
+            <Position x="582" y="351" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="CountRecords.yxmc" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="15" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="17" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="19" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="21" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>UpdateUpdateCategories</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ed50193a-57ed-430d-952c-1ca8f6f0d276" />
+      <Telemetry>
+        <PreviousWorkflowId value="86876a4d-63d8-44a1-aa18-8325da847135" />
+        <OriginWorkflowId value="86876a4d-63d8-44a1-aa18-8325da847135" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
