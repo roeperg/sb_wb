@@ -1,0 +1,927 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||Select *
+from dlprd.finance_rpt.rpt_gems_eom_retail_shipment</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>None</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=Select *
+from dlprd.finance_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="date_shipped" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+            <Field name="box_type" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="order_type" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="sku" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="freight_carrier" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="ship_quantity" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="330" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_8436_23dd517a2817384d90f462629ed8e88f_\Engine_8436_347c9ca4e979064d8a7f15da6f6fe163~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||Select *
+from dlprd.finance_rpt.rpt_gems_eom_direct_shipment</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>None</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=Select *
+from dlprd.finance_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="item_number" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="qty" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+            <Field name="shipping_method" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="shipped_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+            <Field name="subinventory" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="organization_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_8436_23dd517a2817384d90f462629ed8e88f_\Engine_8436_7c859b42ab065446bec279f2a693999d~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">_externals\1\GEMS_EOM_DIRECT_SHIPMENTS.txt</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>\t</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>GEMS_EOM_DIRECT_SHIPMENTS.txt</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="#DATE_SHIPPED" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+            <Field name="ITEM_NUMBER" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+            <Field name="SHIPPING_METHOD" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+            <Field name="QTY" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+            <Field name="SUBINVENTORY" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+            <Field name="ORGANIZATION_ID" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_DIRECT_SHIPMENTS.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">_externals\1\GEMS_EOM_RETAIL_SHIPMENTS.txt</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>\t</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>GEMS_EOM_RETAIL_SHIPMENTS.txt</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="#SHIP_DATE" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+            <Field name="BOX_TYPE" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+            <Field name="ORDER_TYPE" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+            <Field name="SKU" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+            <Field name="FREIGHT_CARRIER" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+            <Field name="SHIP_QUANTITY" size="254" source="File: C:\Users\rcowing\OneDrive - Intuit, Inc\GBS PROJECTS\DATA LAKE\REPORT TABLES\GEMS_EOM_RETAIL_SHIPMENTS.txt" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_8436_23dd517a2817384d90f462629ed8e88f_\Engine_8436_413ebd7252aed14082522656136ff610~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="306" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_8436_23dd517a2817384d90f462629ed8e88f_\Engine_8436_6f745a413a41df4e9290c97d3223507c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="762" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="#SHIP_DATE" />
+            <Field field="SKU" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="shipped_date2" />
+            <Field field="sku" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_#SHIP_DATE" selected="True" input="Left_" />
+                <SelectField field="Right_shipped_date2" selected="True" rename="DLSHIPDATE" input="Right_" />
+                <SelectField field="Left_BOX_TYPE" selected="True" input="Left_" />
+                <SelectField field="Right_box_type" selected="True" rename="DL_box_type" input="Right_" />
+                <SelectField field="Left_ORDER_TYPE" selected="True" input="Left_" />
+                <SelectField field="Right_order_type" selected="True" rename="Right_order_type" input="Right_" />
+                <SelectField field="Left_SKU" selected="True" input="Left_" />
+                <SelectField field="Right_sku" selected="True" rename="DL_sku" input="Right_" />
+                <SelectField field="Left_FREIGHT_CARRIER" selected="True" input="Left_" />
+                <SelectField field="Right_freight_carrier" selected="True" rename="DL_freight_carrier" input="Right_" />
+                <SelectField field="Left_SHIP_QUANTITY" selected="True" input="Left_" />
+                <SelectField field="Right_ship_quantity" selected="True" rename="DL_ship_quantity" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="414" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="qty" />
+            <Field field="item_number" />
+            <Field field="subinventory" />
+            <Field field="organization_id" />
+            <Field field="shipped_date2" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="QTY" />
+            <Field field="ITEM_NUMBER" />
+            <Field field="SUBINVENTORY" />
+            <Field field="ORGANIZATION_ID" />
+            <Field field="#DATE_SHIPPED" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_shipped_date2" selected="True" input="Left_" />
+                <SelectField field="Right_#DATE_SHIPPED" selected="True" input="Right_" />
+                <SelectField field="Left_item_number" selected="True" input="Left_" />
+                <SelectField field="Right_ITEM_NUMBER" selected="True" rename="Right_ITEM_NUMBER" input="Right_" />
+                <SelectField field="Left_shipping_method" selected="True" input="Left_" />
+                <SelectField field="Right_SHIPPING_METHOD" selected="True" rename="Right_SHIPPING_METHOD" input="Right_" />
+                <SelectField field="Left_qty" selected="True" input="Left_" />
+                <SelectField field="Right_QTY" selected="True" rename="Right_QTY" input="Right_" />
+                <SelectField field="Left_shipped_date" selected="False" input="Left_" />
+                <SelectField field="Left_subinventory" selected="True" input="Left_" />
+                <SelectField field="Right_SUBINVENTORY" selected="True" rename="Right_SUBINVENTORY" input="Right_" />
+                <SelectField field="Left_organization_id" selected="True" input="Left_" />
+                <SelectField field="Right_ORGANIZATION_ID" selected="True" rename="Right_ORGANIZATION_ID" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="qty" selected="True" size="40.0" />
+            <SelectField field="shipped_date" selected="True" type="V_String" size="19" />
+            <SelectField field="subinventory" selected="True" type="V_String" size="255" />
+            <SelectField field="organization_id" selected="True" type="V_String" size="21" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="174" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>shipped_date</InputFieldName>
+          <Language>English</Language>
+          <Format>%d/%m/%Y</Format>
+          <OutputFieldName>shipped_date2</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert shipped_date To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="qty" selected="True" type="V_String" size="40" />
+            <SelectField field="shipped_date2" selected="True" type="V_String" size="22" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="330" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>date_shipped</InputFieldName>
+          <Language>English</Language>
+          <Format>%d/%m/%Y</Format>
+          <OutputFieldName>shipped_date2</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert date_shipped To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="426" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="date_shipped" selected="False" type="Date" size="10" />
+            <SelectField field="ship_quantity" selected="True" size="40.0" />
+            <SelectField field="line_type_id" selected="True" type="FixedDecimal" size="41.0" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="534" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="box_type" selected="True" type="V_String" size="255" />
+            <SelectField field="sku" selected="True" type="V_String" size="255" />
+            <SelectField field="freight_carrier" selected="True" type="V_String" size="255" />
+            <SelectField field="ship_quantity" selected="True" type="V_String" size="40" />
+            <SelectField field="shipped_date2" selected="True" type="V_String" size="12" />
+            <SelectField field="line_type_id" selected="True" type="V_String" size="41" />
+            <SelectField field="date_shipped" selected="True" type="V_String" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1290" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">%temp%high_radius_shipment_report.txt</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>FileName</MultiFileType>
+          <MultiFileField>FileName</MultiFileField>
+          <KeepField value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%temp%high_radius_shipment_report.txt</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit>
+            <Dependency Path="%temp%high_radius_shipment_report.txt" Package="False" IsMacro="False" IsOutput="True" IsAlias="False" />
+          </Implicit>
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="594" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'high_radius_shipment_report'" field="FileName" size="1073741823" type="V_WString" />
+            <FormulaField expression="'high_radius_shipment_report.txt'" field="TrueName" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.TempFilePath]+[TrueName]" field="OutputPath" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FileName = 'high_radius_shipment_report'
+TrueName = 'high_radius_shipment_report...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1194" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FileName" selected="True" />
+            <SelectField field="shipment_id" selected="True" />
+            <SelectField field="so_fulfillment_id" selected="True" type="String" size="255" />
+            <SelectField field="waybill_num" selected="True" />
+            <SelectField field="customer_name" selected="True" />
+            <SelectField field="cust_po_number" selected="True" rename="po_number" type="String" size="255" />
+            <SelectField field="order_number" selected="True" size="40.0" />
+            <SelectField field="sku_num" selected="True" rename="SKU_#" />
+            <SelectField field="ordered_quantity" selected="True" />
+            <SelectField field="shipped_quantity" selected="True" />
+            <SelectField field="date_shipped" selected="True" />
+            <SelectField field="pod_delivered_date" selected="True" />
+            <SelectField field="pod_received_by" selected="True" />
+            <SelectField field="location" selected="True" />
+            <SelectField field="freight_carrier" selected="True" />
+            <SelectField field="fulfillment_partner_code" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1110" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="OutputPath" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1194" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="OutputPath" action="GroupBy" rename="OutputPath" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="PortfolioPluginsGui.Email.Email">
+        <Position x="1314" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SMTPServerName>wnp1.intuit.com</SMTPServerName>
+          <ToIsField value="False" />
+          <To>frank_mariani@intuit.com;marsha_hadley@intuit.com;joseph_abinsay@intuit.com</To>
+          <CcIsField value="False" />
+          <Cc />
+          <BccIsField value="False" />
+          <Bcc />
+          <FromIsField value="False" />
+          <From>wnp1-alteryx@intuit.com</From>
+          <SubjectIsField value="False" />
+          <Subject>TEST HIGH RADIUS REPORT DL VERSION</Subject>
+          <BodyIsField value="False" />
+          <Body>Attachment for upload</Body>
+          <UserName>wnp1-alteryx</UserName>
+          <Password>43AFCC19F882786EEEFBC3812FA0246F36FF74A25D69F2836</Password>
+          <Attachments>
+            <Attachment>
+              <ValueIsField value="True" />
+              <Value>OutputPath</Value>
+            </Attachment>
+          </Attachments>
+          <Enabled>True</Enabled>
+          <Port>587</Port>
+          <Encryption>STARTTLS</Encryption>
+          <SMTPAuth value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxComposerEmail" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="942" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'high_radius_shipment_report'" field="FileName" size="1073741823" type="V_WString" />
+            <FormulaField expression="'high_radius_shipment_report.txt'" field="TrueName" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.TempFilePath]+[TrueName]" field="OutputPath" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FileName = 'high_radius_shipment_report'
+TrueName = 'high_radius_shipment_report...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1074" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="freight_carrier" selected="True" />
+            <SelectField field="FileName" selected="True" />
+            <SelectField field="shipment_id" selected="True" />
+            <SelectField field="so_fulfillment_id" selected="True" type="String" size="255" />
+            <SelectField field="waybill_num" selected="True" />
+            <SelectField field="customer_name" selected="True" />
+            <SelectField field="cust_po_number" selected="True" rename="po_number" type="String" size="255" />
+            <SelectField field="order_number" selected="True" size="40.0" />
+            <SelectField field="sku_num" selected="True" rename="SKU_#" />
+            <SelectField field="ordered_quantity" selected="True" />
+            <SelectField field="shipped_quantity" selected="True" />
+            <SelectField field="date_shipped" selected="True" />
+            <SelectField field="pod_delivered_date" selected="True" />
+            <SelectField field="pod_received_by" selected="True" />
+            <SelectField field="location" selected="True" />
+            <SelectField field="fulfillment_partner_code" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1170" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">%temp%high_radius_shipment_report.txt</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>FileName</MultiFileType>
+          <MultiFileField>FileName</MultiFileField>
+          <KeepField value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%temp%high_radius_shipment_report.txt</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit>
+            <Dependency Path="%temp%high_radius_shipment_report.txt" Package="False" IsMacro="False" IsOutput="True" IsAlias="False" />
+          </Implicit>
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="738" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="12" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="12" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output3" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>GEMS EOM Reports old</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="a27f65fc-c28b-4c0e-aded-e91231b42872" />
+      <Telemetry>
+        <PreviousWorkflowId value="0dcadf1d-5e71-4ba6-9b1c-4253878b73e3" />
+        <OriginWorkflowId value="0dcadf1d-5e71-4ba6-9b1c-4253878b73e3" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

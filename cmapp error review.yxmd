@@ -1,0 +1,1357 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="138" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||select dlprd.fin_cmapp_src.cmapp_projects.record_id,
+	dlprd.fin_cmapp_src.cmapp_projects.consumption_fixed_flag,
+	dlprd.fin_cmapp_src.cmapp_projects.contract_stated_value,
+	dlprd.fin_cmapp_src.cmapp_projects.sector_merge,
+	dlprd.fin_cmapp_src.cmapp_projects.proj_driver_txt,
+	dlprd.fin_cmapp_src.cmapp_projects.proj_start_dt,
+	dlprd.fin_cmapp_src.cmapp_projects.proj_end_dt,
+	dlprd.fin_cmapp_src.cmapp_projects.proj_driver,
+	dlprd.fin_cmapp_src.cmapp_projects.dt_created,
+	dlprd.fin_cmapp_src.cmapp_projects.proj_completion_ts,
+	dlprd.fin_cmapp_src.cmapp_projects.contr_sgd_dt,
+	dlprd.fin_cmapp_src.cmapp_projects.contr_eff_strt_dt,
+	dlprd.fin_cmapp_src.cmapp_projects.contr_expir_dt,
+	dlprd.fin_cmapp_src.cmapp_projects.contr_status,
+	dlprd.fin_cmapp_src.cmapp_projects.currency,
+	dlprd.fin_cmapp_src.cmapp_projects.tot_spend_amt_usd 
+from dlprd.fin_cmapp_src.cmapp_projects</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=select dlprd.fin_cmapp_src.c...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="record_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int64" />
+            <Field name="consumption_fixed_flag" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="contract_stated_value" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="sector_merge" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="proj_driver_txt" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="proj_start_dt" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="proj_end_dt" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="proj_driver" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="dt_created" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+            <Field name="proj_completion_ts" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="contr_sgd_dt" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="contr_eff_strt_dt" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="contr_expir_dt" source="File: Corp_Fin_Athena_GBS_Restricted" type="Date" />
+            <Field name="contr_status" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="currency" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="tot_spend_amt_usd" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="Google Sheets Input">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookID">13CUeSIWEk1em_0AvxCckyC-rvjFMiLUThmaqel1h8Ck</Value>
+          <Value name="firstRowContainsNames">True</Value>
+          <Value name="worksheetID">0</Value>
+          <Value name="workbookName">CMAPPERRLOG</Value>
+          <Value name="worksheetName">Sheet1</Value>
+          <Value name="view">4</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">488751C470F67D396D4CA79B783FEC33F483FD123BFFD42782DD386D0395853939E126153E7C87D58D9F6B95576E6D7C7EC89654B805F800E96950B46C8E64E129246A8E6C8E9B9A81444B8D3725DCA2880C1B8ABBC65CCD1ECE6A7FC4FD9B8848C364120C2016DF3C3A30304828BB439453DB532EA23B5BBFC87A3885E46FE31DCD1C7AA67AABEFA852DFC939C1440A6192B14A83F758DE36E59681C22F92AFAE34A6C04A2BC33B706DF8500B08CDDEBEFB2B0A1A7D2D959493D1F011117C6AFABF981F28F3CE702F65311AC167008F7FDEC2AEF41F46E6AA1F27A42539B8A97881E468CA009C7657668C5CD6501F6359F94851361842DC5E345C7D7E4EB81FEAFC0578B7A7E2A6EDE520406F3418F49CB29F1DBF38D9A4AEDAAB7ABE97336C10C20B3FAB56BEECF5B46CCEB8C640AD3E8FC1BB5567C34F8011AD491DC5004FA02038EA5A1036B579311AC711582ADF62814188CD9FE8ED4B5FD8B49A7F2B3F6B0C5C530CACAADB9707D4359D76251E151CD1EDF2DDA891DCE62F1586F6EB2426DB0496EFF8826F80729B30ADB2DFF29BE81AA342D9B5CCE5176A743CA25B6B13954387F4722351F1BF206C77AE03EAAC7A3A1C39A427956041267EDE764D727FCE9DDA372E9CAFE27D806E5A9FAF5E7ACA2C267AB505488466596B425B95DFFFA6FBFB14E7D51A976AE20DEADBF440E88C1099FFE04FA51B0E4B8722FE8EC9A7ADB5B3C19E79E3D01933F3CC3DB9A17558AF84EEDEF6EE50312F0B430DBB8A7BE906517842DDBA657DBBC4AFF9376BCF8088E77AB14EF35359AF82D22372144294210786F3237AC02E2FCCDA791466BE6E56CDE994AACC8CC959BE117A1FBE8956F6008B94ED793A1820D4743073848C5108104382E9205226B39A65A4CE1301F02EB15DF3256D44B9E1BFD4F9EAA2DFA98DEC295051A1276E58FE581FE916C99B3C7D191E7965204A5A2C99EB4A11B9D7CA16CE68BAD442354740CEB34B496C6DADEC436DEB6BA79200736684555A4D19C041B30C16077B35370941236A2307ADB826C9A501EEE70EEC20D055801ECF1C18E2F261E7A441CF96DB437B8298A8D42CCF58766AA550F06F9F442C3D19FDBF29AA6EB74AB6890BEE11CEE573F8E5273B2D9A3E5B8DB2EDDA707C5A43F9FF2238FFAB8206258EC90C9DA8381A18CE84ECED15821695D90CCB8926D7A</Value>
+          <Value name="accessToken">4F85F29D2C03B5F5FA97C10FB8A5ED248827620653A7004B2C1E840687D42F3ADE062326C2A40C193EDD5D56B863CCB2B0FAD3E1E232AC16B1BB33180F463D19987A64B156780B5B9360EDB29D4DA5EEFBE2E0908DBDAB17D4AFB447D078C69E8D9A6D8DDD8340FFA51C361E7B2EE35545071844027D2EF16776F9B87B311AA1E0DA069B777E4106B14DC2D11A50D94A9C8ACA8D00B7D8196C349999BA9D37F3A7F8F9C0AB8CE88932F8791012B71CF7E905198A381056CB6326392D7417FDD5430687E635F9D78634D89CDA3577C6E139BFD7309DDF71B59B85CB27A8FE5312AA8066A7E409E4F3D4DAF29D14E232B283394545A565EEAAB202A1132D97EEF092154D0066BF81AC28824E4A7BD7D0A20E60FD3ED295B5855470C9E2AB7689D39F4517B6C458902BFF487E43C361212779ED4F5914A769F8C76D2F7D628C8FDF842902AAAFF9C379A5B9BEF97D0E7BCD856E29E1A7AA0F88CB7221EF8417359C33732143F9EA111CB92E4F6BDAAE9C6901D007241B3939EBF069017B4D536782300CF198479745AB6E30DF927054095D8B01195013081D2A3CEDC91F42527DC2A45686F6BDC1A7237E5DC2C7C3EA910DAEACFFD3B1A5D0A8BBB628AAFC602718006098DEC7DDC6E196019D9314876A9460821253CB04334C2370BA3372E92E66F228342C4D476D58C8160E2AC52154919616CCB9477E6273C4B4EC564BDB0F6298E78CB4E9551CD30D021FE20DF73AACBBCCB06DD9103D2F5B2EE87A6835258612DF389FB1D778418CA2F27A9643B634B4B008C9028AD237B496A36725324458B70616F62E22B5920706C005E33F1ED37E9F41F2635495071695F2946D4EEAE8C2E321A3E2D51C2C3F94556A77ABF1A73931352B097786455D3C48A23553F901647C60573370920F726D7C36AF7921FF29934FD543292CFB9EB65B53E66F937B37C6E3669C802F899D7DA01022F1C0000D6EA8E427BE35684CE1C67DA136755A089D96FFD621CE886D6EDE0CB96BDA5E7BFD0992D74605B63806777BFB58F2097E7D94652FCC58F517EB1917CCD5023986344E886392FB381FF3DEB608E2AB18891EFE298437D8EBDC7EBA33035DACAF82682530E72476B91928EC096E1B94778342EE5FAA3F89137A54802648C30E3B3596B49CFA0060C3589FEC75A18D9470A5D44060B6E06C6C4DD58450CB641AB98A92A4DB291017DBCD9E41B60FD576B7F0309B5C04B7A835CE798B81225EAE6577B8B0AA5780B554AD7F45FE6CB1B55CB23A608FC35FB572FB559AA056176C90945453191C0BB12197688F99B9674A19205E323CE24C3CF86081B9BF611B18F78BD1184B8CC36278153DB11A9942F4564D9D5FDBD3050F8E03EF32E9B821F20C62E9655035E0731EF18BAB8035AABE786380E57C7D884726A03097800DA024B4230008603BFABD6349070DAD0EA3AD97755C0D275A6DB0145D707C8911B87F729281A4BEFC67CAC09BBA8899F6DB96801519BAFA4B161D8BF6593C1F2C40510F1BE6424FA6DFD6A51D07DD416A5876150632BB090E4C4DB74620EBF296CF530F83CE68E3A9893150D2F126CCA13E8DB3805AC98F8D4F8A89EDD54E85D39D217DCBD0CF014959C3280CBA2273750AE6ABEA392708E540960BC31302927A39F6CC46EA011912CDAE53E6A46802372C67EE4BC7122380881D65B89524FD6F4377AB1F264D0FB03A68EEBDBECBFD40AC6AE7E7346E02DF63ACC886639C9BFBAECCAC84807083985D1C204EC206F1ADE1D7257A812021A994090CA0040AC1A8B361F7D7040F5F40A5FBD90FF8BA08E7F94E5B6E43BB137CC8259006599F8C713807235D054E8E7DE391FDD1800D13B015DFEBA9805D9000E25FB641907C8097BF02DB7FF4DD0FA020438E00DECD0384A622CFEFE443E1CED836A4F2F2A8AFA8C1596022D08AA62B947E78A8337424BBC44A7829915C4019244AD0B8A5286C8AF6A8602BEB7285EB1A8ABE2A9D7A706EBECE6109FEFFD34A4037D59FD7CACEA80B7644C286B5A048018F7C1248ED27590EAF30BDFB3FC3F84BF0D95D571ED9078A8734D808788C979A501EF05ED7247263E2E102C9205D351B9D843A106FB150CB169202D3AF8ACBE2902D208C89B5323C8CA781A5C9DD99C66E346B990F91EA314CEE9466E3F73B377E6B8FEA0FA5AA4D1786B62A3B780A626EFEB094E83D0434A1ABE7F403998FA8916565525D0792601C68EC72105BA1C688C19DADB91A8086EED4643A3B77067E494EB88EFDB2F80C7342E82E1148EDC2096DD93102401BF3FF35729AFAA729C2307682A4C0EB89DD71E49131F0E6DC0190552FAF52B4FA5148D1465B4544CC583F462EF86980E449E30365C2D50F35671A0F6CD9D00E2D74A3DC06DFF30941D7179BCE388703AA6CF84AB2C2332BBD6BB5AA2DA00C82D6362F3514D70403477A47318E21A1FAAE133A1C57493D715EB101AC1A3BEE71A4087E0FCE1C9FB822CF99B2B80F3B1DA77787446BEABA46E62BF27CD332BE73283D8664E6DD20EB1E55A</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="630" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="CMAPP_PROJECT_ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="record_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="330" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_id" selected="True" type="V_WString" size="21" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="726" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_25171072c575844bb9ca923f8a3a9028~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="726" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_60aee0d4c270dd4d8af961bbcc5b7b59~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="726" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_998ef46782aab7489f7568a4de099e30~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="438" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>INTRODATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>INTRO_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert INTRODATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="534" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>CLEARDATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>CLEAR_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert CLEARDATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="246" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="INTRODATE" selected="True" type="Date" size="10" />
+            <SelectField field="CLEARDATE" selected="True" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="342" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>ERROR VALUE</Field>
+          <ErrorHandling>Ignore</ErrorHandling>
+          <RootName>ERROR VALUE</RootName>
+          <Delimeters value="-" />
+          <NumFields value="3" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="Google Sheets Input">
+        <Position x="858" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookID">1A3NNiHqpFW8c_upsh6wg0k5z6IQHudQyWnjsSmAEdXw</Value>
+          <Value name="firstRowContainsNames">True</Value>
+          <Value name="worksheetID">0</Value>
+          <Value name="workbookName">COUPAERRLOG</Value>
+          <Value name="worksheetName">Sheet1</Value>
+          <Value name="view">4</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">44ADF775C4502904FA136330854450C26923F7CE6254B5A1A54E5E7B1441697B5C3C918E251CCBFF2CE1F2D96F6BEDC0AF8901A308839AAEE554FF45DF31130D0564DFE8B4A3CCF200B5C729FFB49EA220FB6F24ED02C9F6EB5B9AB30D35B6C46E4E15C9EEB45214402A14F268B1C1ED83AE25D12DDD8FB232155F1A63C2ED34083A27D4E888FCE8F11DE5A2C02AF12C78BED619D611C72B6544C9645F8E97E546D5B987E96C76D8C8D92EDC3CCFF146D20C9B2A54CC3E8AB94AE117168D04BFE562090DC2C8A750A5FBA410309146F8645D347DD7DA99814B7F7821F56067A64461A9A5CDC9D876FC8581E054DF596D2AC9D3534CB43311D77DBDF308985417CAE2C89D1392B2DC8CB6821262B595332D181477471A8DAB551D2E3DA31C6A0E04631E1AE991043C81EE13115AB6A435924ED3D6DB0425E96326CF9497401F3864BDDE26C146400CCF4092F8A9F57D2633E6547FD0CCBD655DE8A35FD4CF9D859160A6F5DF71279E7D70E86244297B278BE0908284E450E3E0EC4AE16E2BA3064DE8B887AC87FCC8F24B7983447F53B7EFB11276DA00422802DEB3E0BDCE9F100C63311DB0A28F67989A4CFA331B56895DC709D160C164DE34DD38AD141DDE260106D8AF8329927099B7EAA515C8AE2DF860F7E8F538F4A4E980F59FEFFDBCD3A71A234D8CD2CF8A2F41AEA11F845F95493968C73D9A3D60797AB02AB132564A22B44487FCED9110C3F5D5DE50BB7B3EBF213D8B261D0DB3F51A904724AAF1B734DA4B7C98D92DF4E2F7599378280F477FFE6A6B36DA2F3520969411644E1FDF277E70FA449086DBD738DCB89296001540B563BB0588343DA2D2B253F6EA3BA7D68DFD11DC407551FC1476A5571AB700B1535EB44BF80C7C1A2987CCC9FAA6A3B10DB8512CFE055FE4869D58587FB52ABA338B5542DF7082A6A01FA7805B2DACF5369E90E7C511630FF5CA23CB450ADA7B12FACA224D02F44999C210870A1F0D632E46F75F62FB5B833453611B28C731C90695105A29ED439ADCD4DBA8EEE8B98A463F6A7B011050DE8FE1C5402A41C2716F2E393B29444976BADA68A208D7A748C6A8A6AC0D5327663EAA87E144780E4AA10200B1D9977E15172CD2067A3D9AABAC634539CE8EE2359CB903225342B9017F07656CCB32AE44717928E3E35931C2453DBEFEAB3864046D8CF61060C</Value>
+          <Value name="accessToken">4CBA505BDBFB427B25D1B1777683829537D787A66BDD5E4F5B2F13C732E5AC5DF56593C896F45AF6D97FE889789668EC6F5D4A5685BAEEBB1565A842825F583C6AEB79BD2740E7ED0F49BB57E25F548CF85F114C9C4974CE448E9DAA414222397A5BC1349AAF810A8E27821514ACB883DBC1882ABC3DAF38A8BFDC4CDD55C61FB60B640AEE4721EF23C15FE07905670E62A7DC59C7AABB772C24AFAAF922DD67C76B9E9DC97CA0BD8AD04FB5B213333D65D2A350BBF0F0B56A807460A1308B0DF3CD4570AD4F2264D1225E1B3A2CE8504B3A44976038291850CCF0F633AA34D7D04A7AF3A1C59A8F1F5F46BE7B12B200EA3D39D7C86C0D30A8DE3309463EF767CA49BB8DB9C74A6BA807A1867B20118684E98C1C8466DD646D7CFF40DFB9F4745E9000E1A9D8EC9AF6F50A7A43BB723C148135874672E553593EB9E4ED1B491C703EDCFAEF928EEB84B86F3E82DBB084C147D88924FB57227194B42F23B701BF2BE395F63F187D757C63DBA42E91FE7504B18F3E06E207CD60446B134BBA22A73807E7C27F9A994434C8D179D82ECEA3CEDFCBDCB40BAB66895D76C20B59DCCF704C377D02580285F6D5B77041962545FD65683D260FD1707082416DC0DE6A716D351414A3440F0D24FE89411D063143629953DBFF84DD3E0BBC5C3CE1406904BB976B19D4D99D006F1B92383C15FAB9FBE6AF68F237F2ACDBE6618ACE2B7A800568C7DDDA83F70F96A1D2C2155E2DFFE2D340916719333965C81A9F4A2FA66926D5614CBCDA12AB67BC9A3B81325676A35E3A0EB8D218A8DDA0552ADCC643BFB0C452BF7F18C6F0D98E251A112FBA5D20088D5C5BEAB858EFC68A04ADDBA03CA00131DE06FCE22372CF0CA2CA615B8D3F91E6E60BD013B8AAC88EE7359E32935ED847D80D4FB8CD8F9168B45FBA762049AE2C5B400EE181A9A21B9F74D76D21BCD4E21357BFD28E0FE519D1D1940F2D277E6D5B31DF450EA27F0EA951C1BC0A753E96FD70AD88522E44DC648ABC4B29623922D490B4FC6F8375BE4D6C22914A484BC990F32A8A01566B3A4A04B7F67D67915E989F311B5F72B8009291095BBF114EF6DCB67BCDC24B6BE59DC6044199784B28B876FC9FDA0FA0B7F360762EDC11EE99A6BC04DFC04BE1406606A9E6E24CC6E60D762E57A4062E96FB8ED24E7930003113A07358CB603FD18D07639E46BE0C4538B6E880B4F5DA19028F14E6507BBFB1D1A5821265D0DED9A079200911E12B114B9EC37245368C1CB16399FB581965F3ABEE93D607146076D925AF0DD4CEFB411165D892E8339FDEBF3E5FE0D7CB1AE3DF8A357BED6B261D1D4B967AB74A163AC6A8B64E5A7DEEE52D844B4FC67ABB7CBC2EAB119DF7A637C50954B9DE6F1B8F740A02B0A58472CD0767F5A57877DEC57CDDA7474C2AA2BE6DF347B75657D8E719897114FE4B69687176A1F7630D35EE8C524E6E395DA5FC2C5CC44181BC54479334B77F4B52102D6C422BDA009502434DB7151F24F9464DDFDD7325EAAA66AAB6B6F7A908D01DD6E105424CF553B8C5F98022A7EFCE630340183877223FAF75DD5F6BC0C7F975D45084A7AFE4AA0990DD242BCA2EEE18ABA88E01BC2344F7DCC8C87AFA8165D3761255220D03A74BC5F28B15CE1026BD1A616C75C2B66F5045253C37F5473DF8A733C629337AF2B53E1CB1FE95860E64B3650E5A4C4AB6B5F05EFC674FA4DC1C9C188124EC2213D49B1D8B58650941775B73CC9DC29DA0E81876A4F79D6DDD84253A1B665BB4034911A4904F5065174FAB7320F1501B761E7B42FB7B41990550892ABC91C6ADB3845192BB6D8E1BA59D79A049C80D53917298304898167B4C9E93BD4BF95D6DB83A1D8DF2FCC2D2609793AAD263566AE06F3C1FF2A044767D42760FA9286D9E378C48D1DFDE8A79FF4FB6221C03812BC07BBD9435E7CF2AC3A148D3F36C4CF8C3966581690548AE76193CC44EE500660D5F25045F73480B75372DD38A320CC57D531D7CF1116299698FFCC01CA6215D90A8B32562C4438AEBD68559A775E9B241AC8EC9724668A250EF8AA94CA6B6500012349C32F37AF1658DF1C9BB3D824907D8CF0437EC9C98F8FFC205E322BDF0F964F5B48CDCA78E8D8557F2536BF65902C527A2A8571C783F558D99BC0B77F2A12FEA111979B4209472F54E494DCCF15D2897A58A3C9FE71C098B8C69F545A622CD0B9D086B204DDAB5FDD406C5BD67060A6D466DD7B8BDF55E5F1C076B7AA03D9C8746BA95332E98136C10BB09E248836A766FB1D23D8E28ABAD9AC1096BD8766B51414B781AD8B76BFE110417EE0FB99C6899B4C5151D2C564DCE7177AB6BD9A92586B544482609CEA3D10FC0CB960624404E8FAEB08F06E9D0B6274152BABC0FE4098690FA9B5C367BDBFFB11A3AE9EBDAF6624B2710153672280535B104128E7134051E69B634FA35AC7CEE1A38604C82194D6D279EE7A9B67FCBE000AD95B82F6A6165314A895B77C7F088780E52D85250A4575275F4E0A1E82F56C7C52F37A7E6F2A26</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="Google Sheets Input">
+        <Position x="30" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookID">1OLlgOKL6eImX1Ca-1JBgTqimAc3uDm8fspTWE3jPw9s</Value>
+          <Value name="firstRowContainsNames">True</Value>
+          <Value name="worksheetID">0</Value>
+          <Value name="workbookName">NETWRKERRLOG</Value>
+          <Value name="worksheetName">Sheet1</Value>
+          <Value name="view">4</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">4F02333B92A9495BB81069173135DEB301D9A4ACAA3F7FB07AB6441A9294E2F189AC5498663B22BCA193B6FC00F02FDA49709B84BE9D16942C44A1B4CD29D6A9967A8FEAF46ACD7FE6DB8B2A6253C21729A27EBABA3B3D919E01DF3E8C1984787F312793CD9A7C96B634588330BCBA9AFAA5E67D29B8FBF0C14802E3C49E83E5427C335AA5145089E0CCE7B7D8839083880063BB9218C42F752E2F24075E9E9FDBFC33FF8B8B868265E5BE60C59CC4A03B251BC56971D487962BE266998EE4034DFD0E97758741FDBE871C065477C9E6A085DE0ABFCFDA1A1FBB58850E97FF5077B4E6475D4D89BE3E1A3C853D2CCD26736C6BBEA6AB498714DE9372634E196CFBB59E3342E681C5011E893D880B47B941F464E9A23CC181DA16884D97587DD2A1687B9E826E26D110A18EF5912FA6B2C3FAE50C08ED96549BBDA1B23E79B698807D67862FA0CDDC12778631C1D7C8F17EB09B1CF041716E372C133040F4BE9E14A1742EFE09AC063E3BA28E5C2047902B1D8F24076A6B1AFC13AAA8CADCC8DEB5B2A9D159177D6590626CD7A40267D35FDCCFC4ACF823A918F8D2F4D72B5BA582873661F67735D238689B75AE0DC808B5039524153253A797C01053FABC364B6F2084E0F685B46AA581E61474D725E8591869AB6CFD4D5E9331595BDCB21CB8046313B9896230D531E96C21B5EB90C5157C78B524E3B5A6921B4810B24F81931B48940225CEF836093D235EFD4087F4A1B04D394B59E8CE25C2BD46F4FD1AF56C71F93DD0752A11ACE8166413F6A48FB8F2773F08BADC5D7B2CFEFF9516BB8DBA124D85F7656E5FF396C1C4E709312F484C7711BDE4E8212093DF5F72CB03121B00B529D0F101E06E1D94A8E7447CC28CC2DE197BE208105A90F7D361C6C176A3250134D454C4735C5854ACE05B79BA3C56FA2DF162A7F0B8C2AA285F01812C9E00398965AB68F45DC10A84ED2E8D28D6A8059C2B814CE79A9F883FB804F7F5A8D8C1796DB714B6E1F986A7A8E5073E9D68427BDD63FC749AAA68EEB8DC52B0029A3581CCA169509E44C7FF51DA0175DCFF66C2C0BA8E40A70F9BC495AAFC38E63989526A0AF03B4935728FBCD058520E993B27D4AACAAB904C5F38F2D3958532DB983D7521C07CFF61629EF05B07AEDBF6B7201E0F4189051F926B44A8A3A2BD922634D7A322464E19889D935A1</Value>
+          <Value name="accessToken">467E45A575868CF59A403119FA3659ED32D6B2E81E979D888B4C60481C29BCEA641BFFCE1E11103B6830295436E81874673DF91A888608408576404933DCA2956A3C26CFEA4F46A1D6ACEE5DB36B9ABBBAC71DE0AF7858DAD563C8BE2EF8F3F6F6EC1685F1E5236DD6017067B54618E9D1C86A0C0EE1ADCDF0BEBDAAB59376839148E2F3A5AD26241AC76AA8D39C989FA17B82925E543B2F492D5C9FD66244F6D5EC682635C4AD18B7711DCC863822BB31B19E5BD038DFE47C360D9EF9AD3B50A4F6DBCE1678BD2D5982E668D852CBBDC6D49606FF85F4B2BEC6833BC7769872ADA17FD8FC78EF0EE3325BA01F444098A2169B5E1E18B3B5ED97ED8E1E29726A2B128168D81564935D6E23473C16C7C08182BB633A4BD42E5729A3BDD110FFA150CD82D235A672EBE93793A4AE787791ADF86B28564DFCDE9B26B2800BDA451484CA0F89F1A6D27837F32B4903AE25DC063BE3AC17BE8129B7B39D20F6ACF1129CB327B8549821377B8B687AD1B7EA81DE11658350AA5375E3D0800142135EF6F496DA5443BCD8C2ACD0588602FFAF8A5E817B1521EC1A4660572FB7CDB53D5D22BE506758F3C754A3316B1893560F9D00F22E551E92656668F5A629EFD382FF8D32037853F50B6047E26298B108A8CC30A8111B58A30CCD4FCCC7B07FE11E1EECEFCA736FD99FC027F744D4512E0AF22CCB4F845F422DE81545F8659223B48C9DFE915D18C2D6B5E6E4FCBBE777015E2BE8BF83AE3D8C8A74B6CF5442070C25089117865F6C325D13A0CE164AA734A967BE598E95CE9C0F0051AA9C97179CBC13E4CD7697D30B1FB8051059272196A0B997ADE4151C96656E476A10762F3F57429FFDFC00AD6AE26ADE7DA101AD4F292E377204F034148ED3923052D4ED4C8ADF4349F2F9648EF57FDD7D4457CC5EA022848B70EB5F3F68A613101DC9BC011D7058C281BA589CF28ED873A8BE38A3F7F7FE309D2BE0852D9B6118F637FB8970C48C1CF7336DA8E70EEF3284133541C5FCC43A7522E233D5704B22C8148A2123EDFF9A9A2068BA4E9C465FFDADDFBFCA1982BA864CFA442A8282134C6E1746D178258A144A5E3668BD27049DEA182250B7EEF6F31F2CE745F70FA25C6997BC41297B2BFF44EC40E28FF8FBD00F3589BC2B93F9782C69217353FED8DEADC3C155089110DE861744894357C1FD1C05290309C3E3FC1A91CFD13DA4132A6FA469D45A201A12D82FDFAD0C03A2995BFF1B05D0250FFFB439A63E5FC6A32E024291E6210B98D5EE3AB13B0799C52395FB93EA04C6652F26C6C1F8FD4199E01B7AC1F240A003AF59F94AC86B0E5C96548B5E805BC37E65B5B7F9D4A1BD0E886470BE8B28D42C936134C0323F690BF1D08CEC2C2807830B3E496BD7929C7776FA83A30BDBC905905F7209D4F6C111FBCA316622D1F77E92DBD97BDA31B48ECCDBDB5203F55E649A530A9A31983FB58414E95B44850D3C1FD67F051C72E23EA8CBCEC15765864B5A3E97378AADB0E8188D0AA28C5F69E611C50E11C1F9F4641184D804557AB3AD2C8846F6C023F54827C1F94CF7A563B7B2821708A09B95634023653ADF31DEBE95C36AAE1B6D8C8922DF877E010AA3DB7F9849BA4A19434E41D6E4C7A2E73F4CF9B21C1DDDCBC60BCB4D065A852C50ED1BA92F3F0F624006733F41031945B6F2F249725EA0A91D2BD5340EE6D040B31CDA02CD433458253D59D16B486F4A140CCDBE3E18627FCFE86AA95B93CA3E5C06C32C622C1AFD7E5D02DC2B352787CD7991E31E2E702CEE3BB3E93169963A4F1080A30C842005429C2F9B6696B6265D4CCE04B9865430EC96A7D1C789682068288ECE5BF7CAF8F79A949ACDBF9E82DD29DEC3EF2C5A6068EB5E32BE97286DFC667464F77BDC0B20628351392C0CCABC0941C0FA8A357D128661BA87D108F1C949EB7CE0F22E1D094D541D30AC3453EDDDE42668D01B79AE6A5F7680DEEDFAD4B837CAAD2500ACDEB9A48E53F418D5D5A01CB9364EBC657EA87863A358925F9128F7D266F6F3958ED6007251AA786E547BB95AF697E7E12180825264891E851DE51540293C2A4D6F06E38C4758799A14C466CFFED1F2BEE99EF77E1F04F70013CD9B5BE67416B576299004ACD8D597E40C4897FDEF9C1125FB6CB9BE137E223F581DFB54FBB2F4CCEAA358A33FD1146E5EE499072CA5326D79591CF9D3F0AD9239D94B104835836169D359771A5816185E1534C8740605288D6778EB42EBAEBEAE6E5CC567AE74F56F14F8EBEB867B93D736AC62A7BD1E273AAF86717EB6D2D5CA56E06A9B610D58D682BE9F9C3B963AEC3774C9B727567B3D7D5E3C13826AAC8CF860E379D8993E0D0F1F6608D117C4E54F95948A74EE9457FD7749AFCF300BAE0763F6A0A9A299875BC562FC37A4C93DA9A4685D4ABF57FA0A0336F7D189D2B0C21804AF5072848B76D26D13B096AA65486CE1ACCD26A0B25D1337FFD05273E1BAE1720720C4E1599DEAB3EC1B19BF404D49C3CEC66569FCEB9F0642F895C4C3B8A61C3</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Input\Supporting_Macros\GoogleSheetsInput.yxmc" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||select dlprd.fin_coupa_src.coupa_req_hdr.requisition_id,
+	dlprd.fin_coupa_src.coupa_req_hdr.submitted_at_date,
+	dlprd.fin_coupa_src.coupa_req_hdr.status,
+	dlprd.fin_coupa_src.coupa_req_hdr.cmapp_id,
+	dlprd.fin_coupa_src.coupa_req_hdr.need_by_date,
+	dlprd.fin_coupa_src.coupa_req_hdr.project_driver,
+	dlprd.fin_coupa_src.coupa_req_hdr.doesthefollowingstatementapply,
+	dlprd.fin_coupa_src.coupa_req_hdr.total,
+	dlprd.fin_coupa_src.coupa_req_hdr.currency_code,
+	dlprd.fin_coupa_src.coupa_req_hdr.justification,
+	dlprd.fin_coupa_src.coupa_req_hdr.record_type 
+from dlprd.fin_coupa_src.coupa_req_hdr</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=select dlprd.fin_coupa_src.c...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="requisition_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+            <Field name="submitted_at_date" source="File: Corp_Fin_Athena_GBS_Restricted" type="DateTime" />
+            <Field name="status" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="cmapp_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+            <Field name="need_by_date" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="project_driver" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="doesthefollowingstatementapply" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="total" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+            <Field name="currency_code" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="justification" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="record_type" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="510" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="record_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="CMAPP_PROJECT_ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_FY FIX" selected="False" input="Left_" />
+                <SelectField field="Left_FY" selected="False" input="Left_" />
+                <SelectField field="Left_VALUE PARSE" selected="False" input="Left_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="354" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="requisition_id" selected="True" type="V_WString" size="11" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="606" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="requisition_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="requisition_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_requisition_id" selected="False" input="Left_" />
+                <SelectField field="Right_FY FIX" selected="True" rename="Right_FY FIX" input="Right_" />
+                <SelectField field="Right_FY" selected="True" rename="Right_FY" input="Right_" />
+                <SelectField field="Right_VALUE PARSE" selected="True" rename="Right_VALUE PARSE" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="702" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_518074f3602b7849843064b8f02604e9~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1410" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_d3635eba619fe24694368449cab4e373~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="222" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>ERROR VALUE</Field>
+          <ErrorHandling>Ignore</ErrorHandling>
+          <RootName>ERROR VALUE</RootName>
+          <Delimeters value="-" />
+          <NumFields value="3" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1050" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>ERROR VALUE</Field>
+          <ErrorHandling>Ignore</ErrorHandling>
+          <RootName>ERROR VALUE</RootName>
+          <Delimeters value="-" />
+          <NumFields value="3" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="318" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>INTRODATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>INTRO_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert INTRODATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="126" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="INTRODATE" selected="True" type="Date" size="10" />
+            <SelectField field="CLEARDATE" selected="True" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="954" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="INTRODATE" selected="True" type="Date" size="10" />
+            <SelectField field="CLEARDATE" selected="True" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="414" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>CLEARDATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>CLEAR_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert CLEARDATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1134" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>INTRODATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>INTRO_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert INTRODATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="1218" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>CLEARDATE</InputFieldName>
+          <Language>English</Language>
+          <Format>%Y-%U</Format>
+          <OutputFieldName>CLEAR_WEEK</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert CLEARDATE To:
+Custom</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="234" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if not isempty([contr_eff_strt_dt]) then [contr_eff_strt_dt] elseif&#xA;not isempty([proj_end_dt]) then [proj_end_dt] else &#xA;[dt_created] endif&#xA;" field="FY FIX" size="1073741823" type="V_WString" />
+            <FormulaField expression="if [FY FIX]&lt;todate(&quot;2020-08-01&quot;) then &quot;FY20 and Back&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2021-08-01&quot;) then &quot;FY21&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2022-08-01&quot;) then &quot;FY22&quot; elseif  &#xA;[FY FIX]&lt;todate(&quot;2023-08-01&quot;) then &quot;FY23&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2024-08-01&quot;) then &quot;FY24&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2025-08-01&quot;) then &quot;FY25&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2026-08-01&quot;) then &quot;FY26&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2027-08-01&quot;) then &quot;FY26&quot; else&#xA; &quot;ERROR&quot; endif" field="FY" size="1073741823" type="V_WString" />
+            <FormulaField expression="if tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)=0 or isempty([tot_spend_amt_usd]) then &quot;ZERO VALUE&quot; elseif &#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 100000 then &quot;G Upto $100K VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 500000 then &quot;F $100to$500K VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 1000000 then &quot;E $500Kto$1M VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 2000000 then &quot;D $1Mto$2M VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 7000000 then &quot;C $2Mto$7M VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&lt;= 26000000 then &quot;B $7Mto$26M VALUE&quot; elseif&#xA;tonumber([tot_spend_amt_usd],&quot;keepnulls&quot;)&gt; 26000000 then &quot;A Greater than $26M VALUE&quot; else &quot;ERROR&quot; endif" field="VALUE PARSE" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FY FIX = if not isempty([contr_eff_strt_dt]) then [contr_eff_strt_dt] elseif
+not...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[submitted_at_date]&#xA;" field="FY FIX" size="1073741823" type="V_WString" />
+            <FormulaField expression="if [FY FIX]&lt;todate(&quot;2020-08-01&quot;) then &quot;FY20 and Back&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2021-08-01&quot;) then &quot;FY21&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2022-08-01&quot;) then &quot;FY22&quot; elseif  &#xA;[FY FIX]&lt;todate(&quot;2023-08-01&quot;) then &quot;FY23&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2024-08-01&quot;) then &quot;FY24&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2025-08-01&quot;) then &quot;FY25&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2026-08-01&quot;) then &quot;FY26&quot; elseif&#xA;[FY FIX]&lt;todate(&quot;2027-08-01&quot;) then &quot;FY26&quot; else&#xA; &quot;ERROR&quot; endif" field="FY" size="1073741823" type="V_WString" />
+            <FormulaField expression="if tonumber([total],&quot;keepnulls&quot;)=0 or isempty([total]) then &quot;ZERO VALUE&quot; elseif &#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 100000 then &quot;G Upto $100K VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 500000 then &quot;F $100to$500K VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 1000000 then &quot;E $500Kto$1M VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 2000000 then &quot;D $1Mto$2M VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 7000000 then &quot;C $2Mto$7M VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&lt;= 26000000 then &quot;B $7Mto$26M VALUE&quot; elseif&#xA;tonumber([total],&quot;keepnulls&quot;)&gt; 26000000 then &quot;A Greater than $26M VALUE&quot; else &quot;ERROR&quot; endif" field="VALUE PARSE" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FY FIX = [submitted_at_date]
+
+FY = if [FY FIX]&lt;todate("2020-08-01") then "FY20 a...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1314" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="requisition_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="requisition_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_requisition_id" selected="True" rename="Right_requisition_id" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="762" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>FY FIX</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-05-07 10:29:26</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-05-07 10:29:26</StartDate>
+              <EndDate>2024-05-07 10:29:26</EndDate>
+              <Operand>2023-07-31</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[FY FIX] &gt; "2023-07-31"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="942" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_89f77792cc4f9e46873249b3eaf4a111~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="834" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>FY FIX</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-05-07 10:29:26</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-05-07 10:29:26</StartDate>
+              <EndDate>2024-05-07 10:29:26</EndDate>
+              <Operand>2023-07-31</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[FY FIX] &gt; "2023-07-31"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="930" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1014" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_22a1344233c8ef43a56ca9fb31503394~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1254" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>FY FIX</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-05-07 10:29:26</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-05-07 10:29:26</StartDate>
+              <EndDate>2024-05-07 10:29:26</EndDate>
+              <Operand>2023-07-31</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[FY FIX] &gt; "2023-07-31"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1350" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1434" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_2652_6b1880d87eb0ff4b89a20446f07ccecf_\Engine_2652_5791ebf645f51340a795548720c46009~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="Google Sheets Output">
+        <Position x="954" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookName">GBS ACTIVE ERROR TRACKER</Value>
+          <Value name="worksheetName">NETWORK</Value>
+          <Value name="workbookID">1z6X4ox-K2lAia6jFdTnU2bLMXjPwG8uuQ9_PkMLZyB0</Value>
+          <Value name="worksheetID">1426176067</Value>
+          <Value name="newWorkbook">No</Value>
+          <Value name="newWorksheet">No</Value>
+          <Value name="deleteSheets">No</Value>
+          <Value name="appendSheet">No</Value>
+          <Value name="view">7</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">4B88DA98ECBCB7E1BCBAB95C4D26D748191432087EAF324061B39B959D6341FBF9C9AAE2EC638DC2110437D0376DF1EE9789CCCC0851B5FD15E4A4C86C4BEDD0E0E105E6E752EFFF1BC12C588878E2997EF35B6706ACF204F81F2D19741E36DC1A6298329BE74A43FD3D2A0BDC630F8C29F6112DA05317D9C5597AAF7004F588332E8510B2748232CB10D1F6122EBF0B3D944862EE1ACCA50F137B0F19E1E81F19567D9FD380E084EC72FE32967EB275414E2D8FAF4E09C355D2FD8921E0C34E84C248F97A0FC51B735DA39BE5503C2EF1E24C588214217D0F1AE9DFC56F88F2F2639BEECBB5C18F5A2FCA2E783E4820FAE59AE60EE61023C0D5BD930072CB8D16CECA42766F33B149AE08885938121213C7CD7DDF360AEE6FA288E15EA940DC3FFE680553AC016DA72D0AECA9F96E66172C067C05932057A4FDD318BBEF18C7D05EB04D7056D75890977C1679F38336781B22622998C30F47B321EE0943EB84A4A65087E6413A5E949A5BF47195DDA163D0599043AD4B23DF8E9979CE0EF35A1541E7E713370009033FA08BA8FA6FEA131C93C30BCA80A988082A9E0E35ADFF9E2E8FAAFC0D26BACD55BF5945A9A0244D3BF6D7B0912797BB8F1F915DB2301ACD7C63526192ACBECBE34D3A27ADB849AEA4D170C3F1CDA4AC6200A5554CAD14086235F40CEC29B51F11978C471EBB39831F315029060BA4ACA85C11DC0DB8D1A311C96B6602C41CD1BF598DCF12AB624A472D6153529CB11E864490499E1EDAF3279609EADABBDBFCC02088C699FFED22844B5760A984CBADF6A5B7D18D447C00E526EE391DC0DEB2CA9063450309082E38505A6A6EF044150C32350CF1831B290107E85A501B3FD86EAC03CEFC93C49AC11D60BC6A473B02C1C5159771119115BFF4503FFAAFAA3E61C64DA91F007D672272DD283FB582FC41436E3CB58A36FE2066C5A3549F429E8DB225BAF664320B3432AF7CE429C5C98A41CD94F1430901FA1E7096DF2A0F9687CC648DDFE8C8CFF7F73109C62457AFCBAFA71A0535C86ACED79A94F25A3DA6B89C62C8822DCA76036172F28198C53A3EA73BC694B2976F39E2684253D9969E7CF7297DE8BA99292E029D489FDD04FD46B4B2C212ED654633846B982308C672412DF0C1BD09CF3D0F54C305DC5C3ADE69DAC92E865B030B1F0DD213FF0E0BD73ED216CE739</Value>
+          <Value name="accessToken">4FC751DB5461FCC06AE8DA8BBCC35017FD306B63EB6510EAAEDD9E9E39AD8C6E54A3EEAAE7EF013C127A1BB471FEB46F1C25B6E5E94E1B5A12A9C01B2261427408D2C433333A7A6B700CADF31D1277DE27262F7925F8C6D8F16D340F7EF3A3DE4A85A504DB9CF0F45B7E2AC69F49B4D101878111B474ED91174688955326D5FA40160FAF5485E264A8F4A8DC474D3D24EFEE2A5D86F6135ECA9F30D200B51DFF7C19F720725657643CB0539B486F11DDF47666047E970E64DF5B3F765F863749708181D4FC0EBB407D2EC50EE416D3D9FD67585999BDEB7ABF7F9E74493A91A9C2B8D40808F43FBDF09EE233ADB1E239962D8A223334FAB866D502F3F8361A660FBC33BCF6BE99BB56E8D596038178DAACFAB4DA5C04F62BBF04D43BA441A4A59B0C54DBF00883AAF2002A0E3D11194DDB6A5E64881BEF67012DC20B8314C818777F107845F5D97218D7CFBB14C77EFB940B16CFAA5E100D3549AB425F79D843A352B55214743D84C1767C1C068915B3517DB99273206B6EF67DCD6870D6760B2E3668B6FFB26305A77EC1F3F508C139C07981969AE762BE439D6EE3B9026B2143DA40556B33A08CECF4D89BC538C69A4EE0EC9F57AF2C9FF9605ECEA95A5025ADE481E59E50F0EF36DE878108D892080C911A558FDE8B31740BDB742D3538764F3C0F58321B62538E6456AF8128644D440111C236A097A5BAA69D999B2E7680044071A2048C334B59A4B94CC56BA693E8226CA0969535CBA476F704FF6DA4C298DDDA93640AF34B0D09735F1905A49E2A982300AA865754BB15B2EE5B27A3074EEA9FDEA433D3603A63427FEFCC1604804BC3BAB07AEF411D5729756EE4A62807AF5CE018B3971C646C91225A4D69117A2F0B44C260A004FB8C81A0CF74868A6009FEB8E4B688C6D360984AC170F1EA4614B51A1133F1B670563CA49C5339F1C3A2AE363674BA3B9162AB25A4DA9D3D465FEB756B7544890696B75D70FF38EAF489DF0172E1D4801B6F6EF63F57754E9853FA917F256A874C6B4C5DE38AD26E3301A569434677554D715E7D430C12DAD23623CA6FF09895F92DCF74F92736C5C9930C370D3B5FF1AB2E8C9276141F0A9A66E9FF5C77BDDD1F590BBD0DF8D9AF8F470BCBFA761AA03E54794FB1A8B057F9855C725F10028A9B2E27AD00C91C79253B12732DCF4EB4E3F2A2423C6497AA9887D5CB5756CD2DB60740082A902303758E3E44749CA0607F8BB9C7411F877E5147F2F74EF0F6EBFBDBA32890B62EC980B28876EC4A1E45834C5CF1BB7C4E7C31822B3EC002A57DE4B452D7B57E5E34F99623962B05201872F504D0D3A8FBFDC50CE0927A548E0144677F604054C38A8991421B315C042FF5C743C7390CA5C94B6B101C4184A8EEA1A8FE3EFA9800179DBAC3738EA2575A3D5D077A9B4CCFD7704666668F3609DFDA05706233CDA0D0C74F5159E5F18C9B88C4B175877E0670B63F4D3502733189B23AD6FC15215BD3CB400876E90EEAC229C19693542D3FED2AB30E68AD6A3F2271E256C20B53FE1A71AF8062213C33E9A5B73B275D45A9DBB0E5906F1C11A88FA280ED35A10DD98967699E6BEBC071DAE07DC66C75F3787A35F3ABB52D3F8CEE2E235B7DF8FE1B8C0D0D57B1111D56CBB8E1F26DC96B1EE57C1C53BB233441C6A38018AAAA54639EC59DFD73081D3FC590F9E1E6620AA0D9AA979729B043D1B8B6A64641EF54D2E083F698156A23884C8B1B1D12990380B5A0F952D9626AA31DFE2800B9ADF56B9A37C26D72A2D375EBC90A54DC77A9C9E28C4E280AED5D2BE142ABD720B61823AC0FE08EF62133130617389819692E6D31C5A93DB2D97F1C1E224CC98310F384230D8961A86BB734FC206F95F0C7CC81F9F85AFFACACCD0A62F96FEDAC9B845E7E9A7E3BCCA9A398A42A2AAFE2143E69BF9451B0957EA36831635930456C72C31461BE260D1B2BF6BC82E42CAB05F33A04681CB133AA2818D1E5C4836B9A817325935FD6E36C170471D5C7465F0139D6B7D3F53E415C5EA31296A0632B02AA5300F3FFC32F08C106A9EEB0F62911D6CCFDBC821428F66E5AD8107B880C9674223F152F89EAB324E6B88BBF1D0C129AA3D47D1FE6756388ECA37FA27E0672798B2F502C13278F0041E46C96B9A23A75B4A085934DB0C79CB0901DAC2CCD2A807CB55B6B7A300CD67C7DF419FA8EB6494BC9F743474ED1E9C2737D81CE3262031489C9BB14798D6BAB52813A83102A6053652ADBA2F00F34B7AAEA27AFA267156492A55A52EBE0EF0F8EF91117C42D6DC03E53E426E365FE95B2DD98EC9631A7963F5D2652B47C137C9E16EB672A7C0F284680B9FCEA2F34E31DC40E3F78C7F5EF4A42E34131BEA2C4A6873F0D1A2DCDA016D572EFA3100CB55E48DF5BBA8C2F510AB814D5FA8E9EEFAB41F8B7BE28133ACADCCC21986DFC4923CD06D0DDB49A384B48C998901410592395D0E04B90BE5BA1FCE5CAA7A4F9B85FB71979E7264A99F08C243F98206B7</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="Google Sheets Output">
+        <Position x="1014" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookName">GBS ACTIVE ERROR TRACKER</Value>
+          <Value name="worksheetName">CMAPP</Value>
+          <Value name="workbookID">1z6X4ox-K2lAia6jFdTnU2bLMXjPwG8uuQ9_PkMLZyB0</Value>
+          <Value name="worksheetID">0</Value>
+          <Value name="newWorkbook">No</Value>
+          <Value name="newWorksheet">No</Value>
+          <Value name="deleteSheets">No</Value>
+          <Value name="appendSheet">No</Value>
+          <Value name="view">7</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">4B22F7ADA1BDC10A3CA3D7A6388E236C54A779A84086322C2621DC222AA5298E4A6A7D8A84F4B65463F767CF2855163D116795A4C09E711ED24125FC8B0D3E9E3A88537432E4BEF6E9744EB0E85A10670CA83722ED380894950DE882B85F4FFA5D31FE3BE2AF274969488448296D3139CC20438CD2E886DA5B9512D13B02B4E015E5D4475C9425FA53505B17EFB33A03FFA81EA35BC43E5B7A85E0841FEC5D0154BB2E6CDCB1693BDE753DC27087EAEEBBD1A0AB3EECD9D4640E7958FC5A552AD3403CC87DBBB9F148C9A9A59D465318245B5971B40C275D82353AA30A5FF422FB8EC561FE247E94FF5D3234D35077988CC55540DA14936071D8761720393CCC0576DD529D4622E0177827B9022BE4D2AC87A35C4933815CDB2B37111AAE1BFB2A4138ACE2CFEE87D454A98AA30D0EE9D821FFF2E2FD604D8C494A5B0EFC0B76B8EE5EF3477A7C427BEC45C2631BD495D00910A28AEF9307CDD145C2BB52F78CF307EC24BDF3CB8234AADB3F1763352156C74FF210F229D593FD6067E75D88AB9F7E088082DD033DEF02D8D7E1CDA420CE6FF82DF4B8A30AFCD05F0630B64F012B6E38A9BC7C05539ED5BCB1024C0737B7FBB6E1DA0168E857D433CB0F86B546DFD47EF564B0C37A626B0B06AB16FC3AD203455BC3894EEBC34A36D4520EB904487DD379B9B972DF55C61D2CDDB66E6BFB041390220280D2787343F4E8D738D20A566BA92938893BCB51EC1DAAD413666B8AB148D82D5D10D8085AE1B205F2D97CE48DB25B0F3A55E5403B29DF6D85D35CE93E4399B6562DC926F82D15D8A65D0C4451DE2EF857F5F4FA272423A088E0107EB63163E602B751E7A704F8A1B68E9894D3A9EADA6E5E6083C5ED22E48F9A0FB047D1C5DEB58D6B5A247F7F24015197571A4B84B68E32815729908B8742427FD2C75634C6BD2A0E4AD6F388968CAC25C045986D6487689443A8788BEDD86AB4C8A55FF49B54DFE413C40FC750767E177112E407DD57C3CFC281E7EA55D943AB23C2C1A5B9C647F3DF40B28FAD469B994ECDBB6F08523326272EE8ABD63688F7A0624501151B3AAE325BFB3259C1F2A9BF016DF7962B9B339F7F16EF8C994A85BFE37202D1E1539D856294D4DD65EFE61807EF4A3297923B0F54A9694EB8DB6CBC7E5F855B254173499661AF982F78CB001B6C8BB770F96AA3A27BA5EBE</Value>
+          <Value name="accessToken">48B1A8A94678932966301B5322F952DF986B30CF887161F4DED0A25E1D6ADAEF5FD8D97DE6B8073998B2DB5E052B5F3BF07FEB2BA679E0763428C7F7DAE365D11889EC095CDE47AA686D734EC1B19C589F7B9EDAB4155AFF1F5E8882829D211E2FE696B55093E96848BF4B92FD0A26FD9367C1BD3C67B19CFF7B155E226171599989E813569F9F37647281234F06C5C131C24FEB9ED16E8C5BFB34A6402BDC1370A35F2DE7BE6DB6E46A043CC9B1C7DF186ADB8C9BD05107167CE1993F5784249AFD2099620A8F59109EA3559A634C7505789F1784417BD754DC3B9F880D6E6989472D583A7DD4460040AD008DBA2B6FE110B6DFF47FF9BF4EF24B4AF8DB46FE19375CAF187B1E52D22CEBB828E35393FB971563F94C7DB1A84AEE28E364CB2B7D763B3D11965346BEA8E8FBBE929FF7DF76D0EDE3123D3690BA4059EA2BB501CED6CD5B035564B1B78A5C39CC665E47119C8A627B0BA278A32DA6CDC690641DE8833C5102BD888FB2BB98A592DC9D6B80AA816D5265D4BF7C6A7E17AF3E663C3204A78AECF4F5309626E57CDB41A73ECCB12BC8A616D8616C3DCF794C9B2E8376169BF2D6C47BD14E1D18BE97E82BD9AD2BC7054D005F0FF3E782C4AA9521BD5ACC711030F32518B4F0B98152858E89D29CB81FF7D49DA45F8207C14B20769EB4FE5F420AF3EDF62AB2BFC5CEAFFF91AD84B57BC71C2AA010FCA44D53E92F999BC3B87D7DAE1ED03EFFF7736A15EE5790825D3B6B1BF6D7D26F0826854179E1E7FCD765CD4B34A28716B41276908AE03E16B06E9EFC3F36E1B667124C3CE425547B9B99762D99CB1B5776BD375138D9CC137A8995366563A0A73ED004A920F38D226894BC06500359357C795A4903F63987082D8F143CB8422D70FD856B0F5F75F774B3F9FD5E0F90CF21E294AF5130E5EE7CE38B227772B51ED62D7B526CAE8D0A060F3B3D85FB25194005F30B814189B386A9D4E7601B38CCACD18BEF06E53C9C46D106B64B137671997F86F3C52F3994EA7649040C5670C10900A5725A62B10D8BB3D9D36E49DC8A99B94F47E0EC9F8EF491CE447CEC880ED9616295D464F8EF00528D009B5A2AAB81CEEDCCBDADD0DD709AB8FCCCDBF0858687E6B31D44524BD0213FF03DB183395039D05DBB2A45B9062C596D613B5530E35DB7619E99550286C0ACFF4EACED3EE65091EC976EC3FF89B04F70DC0C6A53767C2A160448798F9D9BF87C5E0CE4312C46A6133F4DA9C26D8D6FBE2B111DA5C08181CC8A07659C463D5EC04D71333F647F49AD1A38365692A5D53B9142F062DE33FCC2326107B942BE587F61197D8C0839848A8FE8FE0198324DB9EC330580CD8FF89C35A43377E7D1B8C5890F783ACDE024C5623FEAAEEC4B60197B7A46EBBC5E55F771CE9C7C4655DFB2B1CEF225FED07FCC9ADF71E8289DC75DC4E7B62C10824AA13E302BBD47710BA80D503C9733512167648D4347A6A4CD0275AB673B50938C728BB6B299AA3EF6BA1145188669F2F1881838BE7A7CB314E5B6E6682C5D9EC68834A54215BEEAD2129CC46CFA0D0B9C858335F2AC5EF44DA853CF0B80C8EC151B6A968434C4A3B731BC7340BDD6B71635320760E89AB8CCEA1146F2EA01E82D583F4A6C43F69771B2D668E85865BD0E6474B7DEBCCE4B1C1F4B7C9C3794232C53600F180989C1719D71E5C043901557E1510AB5F2327EC967085E7DE628A35FFD920509681D31C3F6AC9000C731CB55BFCE032B4BF20A8134FC92554A643DD6CFFBB40CB84CD61637CB990C2DE0C13A88E354E48EC49E5A1ED5EC5059C3330288737CF9DBFFFA2E32EBE6129E35CF267DF355B363A5C00A3146C728EF7069395217E271CA533CF8F8B8EE0971B243886FDA9DC3017D0FD3F65A2C583424606F8FBC3547D2FAF8B681E2CFCB37EBE0112D475B0641D481B2BB956DCF72D95D9665382228E3F6B1F8956A26A8084F79F9E353FCF31FA08EE5168833477B19564EC7665DDE0B8986076DC985C33D9CCE893FA4900AB23573FC4AB9749A5FBC1D89B9437FA6CE1233FEBE591BDCA7526E47BD761FAB09820F294F6604F1CA2903DAA8D5FF5E5A254483E4375748A044E39D37C5EE826C34FF378F74E45D37ED6FA9595FFE3C92E31191445D53ECC6AA93955F3B1DDFB10D0761710866EED856EE29079EACABC960B20CC96915D12287356EAFDF65D6BC364FC648F376AB8AF85A80CAB7E671BEB9A36C2502D62EC4DC4CFC249BB623AC8E7B266659D38AD71961312B01DE5EE759A0B014836F0F123A026EEE463828C560FB08857E8573C79B9F2319CACD198A0D51B6A2B0764EB61FD2BF1F174EFFF7B182A49FEBEFAC4943FCA83DA7A974F3EB6A9DD3F295956FA053AB5106C9B58EDF624A1677FA4373924E177CCE300BBE19EDAA1305C2E6CA256C1E9A030AF2317ECC4F654B4255C394E726AFC10C97A867BCC8BF42E868FF21ACA7415CF97FAB1A43CC7929F831A49F6D25334EB36F9E5CAC89E59</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="Google Sheets Output">
+        <Position x="1446" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OAuth2Overrides">False</Value>
+          <Value name="client_id">566095152514-bo26d3bkmcemliq3nve4i37bplfpdgrj.apps.googleusercontent.com</Value>
+          <Value name="AccessTokenOverride">False</Value>
+          <Value name="workbookName">
+          </Value>
+          <Value name="worksheetName">
+          </Value>
+          <Value name="workbookID">
+          </Value>
+          <Value name="worksheetID">
+          </Value>
+          <Value name="newWorkbook">No</Value>
+          <Value name="newWorksheet">No</Value>
+          <Value name="deleteSheets">No</Value>
+          <Value name="appendSheet">No</Value>
+          <Value name="view">2</Value>
+          <Value name="client_secret">40EDF1E5A223C6F704E2A6BFF6401F9703D5203377B8C54DB3D27F610FE76E40199C88356AA4DDE0BE32EC55648FB5EA434DD150A4F30970DA6E63B8E4F9A11DEDF10F18BF87D450F4EEE90E74F0D58C3811BC3E8873D39DFA7F0473CBD99035777EF4C38B9402FAB1E8B442257A74585B7B07434EE5DA06B79C95C5079983E6A2E815912AACC108320BA7534830E386A83DE483C1F187F238178F4300DA3D224D8AE96EEC2475DEDEDE4B37318C23BD9B77AF4265C1872A413B2F1B256DA8F8C170320A4FE1E184E23EC05851CC0097506F9356A966C</Value>
+          <Value name="refresh_token">42C159EF35D7DF0CF737DAACD4AE68483751DBF59E2162B050E1197A2A840DFA4C2C0AD4BA21CA989E8AB7941EB7AC21FACDDCE0E59BAF855D68C2F2AC4B5C6A2D174B306724FA5ABE3721B5C62CB1F5919A1574AE6D73C991BFC2437CBE4D06D16C843CB1C61F26211284DA30840276E50B73B82F0D2D534B86FD046DCE844BBDC92497A44D26417F0F7575775306631BCF768E9EEF071F4394D98EABB7CCC58A4B03A21FD37BCCB6432C5508FA901407FFDD20C7840EB7C4CC321047B7C9586EB7F519EEB2BBE4F4FF02D27928AC1E75979653C7518B9ED057E8F5799FD242C0D0381141F2E67CD7C98A6519F7FCC29840ACA337C88F4884163B4B94FEB2808847D7D5805ED11FA1014974B57B145D8D6ED19E584531D639042E5FC4D2A103BDE2882999D1C7EDA116AB997C21A5ABA8A94B27013AFB84E302DD926B605BF46E3F4A210CD351BB56D5F9CE06C24C9E7DE5E9329E46EC6DDB7CF358A2AFE803DCD445CF95FCE5B5A63A4532253E6B5B6CD729A972B5135B4C32DC17AE1D9AA2FBBE1AA308493C21F1749741E13FDFCB5B2E27FC073E8FA82EC81B2F217E73C2B79357C83D71F6200CA5C40DF9DC95D2E3DDF86D5ED7A534AB6E659A787870476CB07AECE931C80EEEE3C2806C81D646A3782CA3F13C7FC06E1207E842C9C0D5BE11FA4E86961CC86D9F962F32B956D912BF3FDEFA5F298D84D3BDFB287AD0FF82BF98DE693825DC4F1CC4C1BBB498EC07DA4EF21B4243B0F00D038589DB82ABC6B1F5F3A4FD79429E2807DC37D54A631FB0F0285DD1070597C32BC0567E9A143D0F76E306057DECA4D58125574CEE5E05B29C4257ADC83667C492FCFEACBA91EBA65586E3616679F6F8F825BB737683F937850EE3536868498D14275503D6E758160699380E776C2ABD1C164DC4BE3AACEB6E63883353825ABFECD7BDAD7B2AF04F6DC1CBC23209DA20F568ADDEDD88096ED0DDEA6194BE993E5D0CD61A4966A88D041FF2AA6983702C16FD7120EAD2783E9C2DC7A3AF8A25C6F5CF2B7D7E31FBDDEF3D20867CD2352514C1E15447EA2303E5D2A222FBFCA8CEDC841EDE35E9DBA5F1648E05214B37BD2CE996CB8B9AF66E2057C3569C33CA788FAADD5B2C8A53A9F20F71BBAFD71A939BAB9EF98260AA12D2D157FB2736F0954AD4D4C6FCD7D23D8781B3731C24B280935D8DDED</Value>
+          <Value name="accessToken">4B342306D6FA052FD4E4ADF479968FA7779EEE2BDABF9D2C4851EB1327E3CAF070A2B28D07122C9E313D4F67EC9FE07A30BE0EBB5075168B28AD6A786EE0436A19B1237B64C63817A8322FC34A48FD8B935A64D26E545B6F00608A852D2900A055A33094AC6795C3B629B88F1DAE7A4C741A5254708F058152BE048B144E56E3DE7D21BDC7304A7A91EECD8F6054FE8B8ADABF6BCB7CE04165D639497B10E90A259A592901C2412ABA7F5A83F8840D0BCB54C0A3D3CAB9D58EE21E0EDEABDA9DD68EB0D028CFD3EF873D22C6329C7F584B5D7869BC05918113CF2CD9A3C2C5580B0533C7EA37409B0AFF92C13BC2D32790A3C94898E1408BD67249A65B41881BFA716D031FE1C74232C6EDC5A7C57DE21E18F0D43FD29EBE961A5A1A40D5A12A10E46B9ABBC0BAB9EF486299C1C3F4B0A254DAE44BA65D0142F5513E26BBB90C65D20D19FBBD18FBB79E61BB027AF9131884E336A3BFCBDDB7DC8E6D29828D24F703998ADCA78178C78BF304945A6EA19441C2487E64F5383A9CE7F83E412787E6137180C6840A02038A5A6EFD2AC7F799894C02D9577491F13923D8B3552F9F90F4E9E24B4FDA0CF041C0BE42CFECBBA3FD16DAD2EAE85E263B7757C23373CB893E89A3BFAE9C0C48BE4E65CC154FAD2B213E924A7FDE3B5BA3A635D8E0D6013D6F554769D8830D5C9C91424348C31503898187F0510433A726B0948CDEA61C5563767B9744504F3877575A5C4CBD6F7A964859BAAA3B3EB924676461BD0DE81ED29DB47A186D62862684AE5FA28A371E68EFA571A4930B68549704B77902FA0904CE08A4DE392ED5F1E2B8743DFBBCE2EAEEA57483FFB8FBDBB5985561FCDA4C0C9FA62ACEC9FE3D98BA20B4AAACE90E88CDFB8B07D9D2C200EE0ECD251F800FD0A6DCE4F3394643DA8A1FF157EB6EEFABA53404AA1037B1270E5BE747CF18318A9BB395BE47F317E95A5B87DF8320E3987BE654800E7272C8A39EF3D83B988D48AC0414A3B7C21C391EDC375339C57A8C94B7C518C7F6331056EE237A14B27D924C74F0F14F458E0E3E7D5B0BFE79DF45876B79D282B3F2E63810B57FF3A0DEC82C73036F6363B07B8ECA42836805CF45D3850D3E46101D656DEEBACEF0D7DE3E53ABA7FF40D5F40F2EA4E48AEE635CC4CB379E1DECEA5046C65A9630CFA13E55101FC7D85BA7635A709C40810048AD3B4E26132D451692FDAB75581FFC99DBE55C70F7711ADDD1737A7A53DAEA4D39E4F397BF6CCE295BB70421558EE2ECA67B2F6C82A139076C3EF5BFC584A516F7EAC708EBB8AE7E48469ADB579EA5023941A138576629E05AAE546027E3D5D683BB9A6CAFF3D8FFCB8EFB28BA4C80B5AC8D5A61D6C7817045FAEB32E6F98A03032143889A44BECB71B121779C5D6D889D9A774A91A1253E5002CEBAA18C7D7CE439575813174E155A90D43CA68A2E153E0630BE8AC3D561C6F3A115CF48BEB3558F3B859AC11F9AAC1A7235A859CFE09842FD9855F8037901F8355E79D70AF5401990DAA43AD7F533BF9F006B1C8497DDDAB4C9108E45A811AFE32AD8FD60D525EA80299FB4104AA55E6460A1CEE3B67EA300214C0B7D1D5B1295AD83DC7E2248612A164357DE7313F0891FC8476501683CE6688AF42419219D02919511D751AD4E9C18DD3F335845EC01B801360419698AAC42D786A5D13AB37974495401CD86A1CE969C76FFC9AECDEDBFAD81E7FDA39024C81FA1BAE5FDED09ABF5F1C7F4420B789EFC29118AE4CF2B7E730CF41DA97B86A581CF72AA8D8A3191D82095E0FB7CA6843BF94FC37BEF33F67288B9A62472A497473E1B1F642202982DD44408B8C7FAE03B1E00A5D541E01AF1EF31D23B702371C9B46519F5BC17C39478DD312BA77DD52175544084867545B180E8BB90C33952A77034955231CDE4892393DCAFD084966858E51203DBC673E7252EE20182AD52E4D45BCA6C2B2F9A1E79B9947C11AF0FEBB2486244B29968FC51C1391868998AA00DD6B23EE8DFCBCF838D6725AC79CC77C41FBC54CB636FA268E9D28EF6D6D8E6AF1375BFBFB9251B0D68B6D5CFFE5CC0F255A8DEE381DB232B34B2C3133DCCC89159D44316BDF72CF3D513BFD9FD29E2BAF5FF445544701E656D006816F0C58F699F3D61D452781C82E8C3568AC188F8F38139ABF5F3947581D8D534CF869DD8DFCD211488720BBD615F48166A48825FFA48F17BE0E7B6A47FE152057870EF932E707E3F7A2A9F8D07592D187E8CCBA3DFDE040EC0AD5F0A241EFA87EE14790455AD59FD2B3B5F84A01362788EDF690C5EEB1875304EFFB0982AC698611C7A8420AB5B4BEB73C91E0EC66E67658A6066A3419F9A6F07789A233EBF4A4BEE202A05874AD4BD49C7C36E4081AA40298234090663842E2FF6B0D38880943436C97BCD30215E91582693E466B15C3145212B9EA9EF48ECB42DB0E4B8D73CA667E4CBA6EFEBB50D42D412D8850EDECECB4F45BEB1562379FC0237EFDE6D2CBBEF77B3491</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" EngineDll="Macro" EngineDllEntryPoint="Google Sheets Output\Supporting_Macros\GoogleSheetsOutput.yxmc" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Right" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Left" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="19" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="19" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Join" />
+      <Destination ToolID="21" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="34" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="34" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Join" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Join" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="True" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>cmapp error review</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ca0d9719-5ab3-48a5-aead-4f615094a244" />
+      <Telemetry>
+        <PreviousWorkflowId value="445f9bb6-fadd-4967-bd70-24967db84e49" />
+        <OriginWorkflowId value="445f9bb6-fadd-4967-bd70-24967db84e49" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

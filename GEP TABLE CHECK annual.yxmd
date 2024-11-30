@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||select "dlprd"."fin_gep_src"."gep_spend_details"."data_source",
+	Sum("dlprd"."fin_gep_src"."gep_spend_details"."spend_usd") as "Sum_spend_usd",
+	"dlprd"."fin_gep_src"."gep_spend_details"."time_frame_year",
+	Count("dlprd"."fin_gep_src"."gep_spend_details"."unique_id") as "Count_unique_id",
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_1_sector",
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_2_category",
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_3_sub_category",
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_4_commodity",
+	"dlprd"."fin_gep_src"."gep_spend_details"."time_frame_month" 
+from "dlprd"."fin_gep_src"."gep_spend_details" 
+group by "dlprd"."fin_gep_src"."gep_spend_details"."data_source", 
+	"dlprd"."fin_gep_src"."gep_spend_details"."time_frame_year", 
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_1_sector", 
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_2_category", 
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_3_sub_category", 
+	"dlprd"."fin_gep_src"."gep_spend_details"."level_4_commodity",
+	"dlprd"."fin_gep_src"."gep_spend_details"."time_frame_month"</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=select "dlprd"."fin_gep_src"...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="data_source" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="Sum_spend_usd" scale="10" size="40" source="File: Corp_Fin_Athena_GBS_Restricted" type="FixedDecimal" />
+            <Field name="time_frame_year" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int32" />
+            <Field name="Count_unique_id" source="File: Corp_Fin_Athena_GBS_Restricted" type="Int64" />
+            <Field name="level_1_sector" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="level_2_category" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="level_3_sub_category" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="level_4_commodity" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+            <Field name="time_frame_month" size="255" source="File: Corp_Fin_Athena_GBS_Restricted" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="582" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_27300_11c5c8d58bca1e43af31310f51f8d59d_\Engine_27300_573b8921f7b21b44bc65c5091ea4dfab~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="210" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[time_frame_month] in ("APR-24")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[time_frame_month] in ("APR-24")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="306" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="data_source" action="GroupBy" rename="data_source" />
+            <SummarizeField field="time_frame_year" action="GroupBy" rename="time_frame_year" />
+            <SummarizeField field="time_frame_month" action="GroupBy" rename="time_frame_month" />
+            <SummarizeField field="Sum_spend_usd" action="Sum" rename="Sum_Sum_spend_usd" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Sum_Sum_spend_usd" selected="True" size="40.0" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="486" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="time_frame_year" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>time_frame_year - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="245" width="445" height="309" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 8</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="79" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>^</Delimeter>
+                <QuoteRecordBreak>True</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>FinalDeliveryExtractFeb.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Unique_ID" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_COA_Account_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_COA_Account_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_HDR_Number" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_Line_Amount" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_Line_Creation_Date" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_Line_Description" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Invoice_Line_Number" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Supplier_Number" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Supplier_Set_Of_Book_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="AP_Supplier_Type" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Active_Non_Active_Supplier" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Amount_Available" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Company_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Company_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Cost_Center" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Data_Source" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Department_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Department_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Group_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Group_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Level_1_Sector" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Level_2_Category" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Level_3_Sub_Category" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Level_4_Commodity" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Normalized_Date_GEP" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Normalized_Supplier_Country" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Account_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Approval_Status" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Approved_Amount_Reimbursement_Currency" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Card_Assigned_to_Another_User" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_City_Location" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Created_Date" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Employee" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Employee_Country_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Employee_E_mail_Address" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Employee_ID" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Amount_transaction_currency" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Approver" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Approver_Email_Address" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Entry_Purpose" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Group" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Expense_Type" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Last_Four_Account_Digits" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Last_Submitted_Date" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Merchant_Country_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Number_of_Attendees" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Payment_Type" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Personal" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Report_Header_Purpose" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Report_Number" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Transaction_Currency" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Transaction_Date" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PCard_Transaction_Type_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_HDR_Number" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Amount_Billed" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_COA_Account_Code" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_COA_Account_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Item_Category" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Item_description" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Order_Amount" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Quantity" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Requestor" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Unit_Price" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="PO_Line_Unit_of_Measure" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Severity_Indicator" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Simple_Assessment" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Supplier_Name" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Supplier_Name_Normalized_GEP" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Supplier_Name_Parent_GEP" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Supplier_Terms" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Time_Frame_Month" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Time_Frame_Quarter" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Time_Frame_Year" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+                <Field name="Spend_USD" size="254" source="File: C:\Users\rcowing\Downloads\FinalDeliveryExtractFeb.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="187" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_36188_85c6a8fa7ee26941abd075f9776085fd_\Engine_36188_3098c53294007a44833a2825bb5a3f7e~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="187" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Time_Frame_Month" action="GroupBy" rename="Time_Frame_Month" />
+                <SummarizeField field="Data_Source" action="GroupBy" rename="Data_Source" />
+                <SummarizeField field="Unique_ID" action="CountDistinct" rename="CountDistinct_Unique_ID" />
+                <SummarizeField field="Time_Frame_Year" action="GroupBy" rename="Time_Frame_Year" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="415" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\rcowing\AppData\Local\Temp\Engine_36188_85c6a8fa7ee26941abd075f9776085fd_\Engine_36188_fdc910d43ca3b24d86da4491cbbaf0dd~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="283" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1033">
+                <Field field="Time_Frame_Year" order="Descending" />
+                <Field field="Time_Frame_Month" order="Ascending" />
+                <Field field="Data_Source" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Time_Frame_Year - Descending
+Time_Frame_Month - Ascending
+Data_Source - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="True" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>GEP TABLE CHECK annual</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="5fea9e42-72d3-43f1-a7ce-ebd72c133dad" />
+      <Telemetry>
+        <PreviousWorkflowId value="130bac49-b8c3-4a00-9359-c53863ddf3a4" />
+        <OriginWorkflowId value="fb494053-9ae5-4ba2-bf47-15cf7b78ac58" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
