@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2">
+  <Nodes>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName>Corp_Fin_Athena_GBS_Restricted</CachedCosmeticName>
+          <File RecordLimit="" FileFormat="23">aka:64d51e35712dc8718e4f1bfe|||SELECT count(*) as recs, date_add('month',-24, now())
+FROM     DLPRD.FINANCE_DM.DIM_CUSTOMER_1</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>False</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:Corp_Fin_Athena_GBS_Restricted
+Query=SELECT count(*) as recs, dat...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="recs" source="File: aka:64d51e35712dc8718e4f1bfe|||SELECT count(*) as recs, date_add('month',-24, now())&#xA;FROM     DLPRD.FINANCE_DM.DIM_CUSTOMER_1" type="Int64" />
+            <Field name="_col1" size="27" source="File: aka:64d51e35712dc8718e4f1bfe|||SELECT count(*) as recs, date_add('month',-24, now())&#xA;FROM     DLPRD.FINANCE_DM.DIM_CUSTOMER_1" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="222" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\groeper\AppData\Local\Temp\Engine_1256_414ced8c878c4be3911dc69ce9223a66_\Engine_19940_3bdb2bcae0904da18c31c6a08f1a4491_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="77" y="257" width="253" height="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 72</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="102" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName>EDPPRDRBI</CachedCosmeticName>
+              <File RecordLimit="" FileFormat="17">aka:5f11ec5cf88a2f1cc8948256|||SELECT
+  PRD_BO_RPT_SMART_PART_MV.SKU_VAR_NUM,
+  SIEBEL.S_XA_CLS_PRTNUM.NAME,
+  TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')
+FROM
+  SIEBEL.S_PROD_INT  PRODUCT,
+  SIEBEL.S_XA_CLS_PRTNUM,
+  BO_RPT_PIM_PROD_ATTR  PRODUCT_PIM_ATTR,
+  BO_RPT_SMART_PART_MV  PRD_BO_RPT_SMART_PART_MV,
+  BO_PROD_ATTRIBS_MV,
+  SIEBEL.S_PRI_LST_ITEM  PRODUCT_PRI_LIST_ITEM,
+  ( 
+  SELECT DISTINCT  DIMC.DYN_MTRX_ID,
+                      DYN_MTRX.DYN_MTRX_NAME,
+                      RL.ROW_ID RL_ROW_ID,
+                      RTRIM (
+                         XMLAGG(XMLELEMENT (
+                                   E,
+                                      DIMC.DIM_NAME
+                                   || ' '
+                                   || DIMC.OPERATOR_CD
+                                   || ' '
+                                   ||
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 1' THEN RL.MTRX_COL_1 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 2' THEN RL.MTRX_COL_2 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 3' THEN RL.MTRX_COL_3 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 4' THEN RL.MTRX_COL_4 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 5' THEN RL.MTRX_COL_5 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 6' THEN RL.MTRX_COL_6 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 7' THEN RL.MTRX_COL_7 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 8' THEN RL.MTRX_COL_8 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 9' THEN RL.MTRX_COL_9 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 10' THEN RL.MTRX_COL_10 END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 1' THEN TO_CHAR (RL.MTRX_COL_11) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 2' THEN TO_CHAR (RL.MTRX_COL_12) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 3' THEN TO_CHAR (RL.MTRX_COL_13) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 4' THEN TO_CHAR (RL.MTRX_COL_14) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 5' THEN TO_CHAR (RL.MTRX_COL_15) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 6' THEN TO_CHAR (RL.MTRX_COL_16) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 7' THEN TO_CHAR (RL.MTRX_COL_17) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 8' THEN TO_CHAR (RL.MTRX_COL_18) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 9' THEN TO_CHAR (RL.MTRX_COL_19) END,
+                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 10' THEN TO_CHAR (RL.MTRX_COL_20) END
+                                   || ', '
+                                )).EXTRACT ('//text()'),
+                         ', '
+                      )
+                         ATTR_VAL
+               FROM   SIEBEL.S_DYN_MTRX_DIM DIMC,
+                      SIEBEL.S_DYN_MTRX_RL RL,
+                      SIEBEL.S_DYN_MTRX DYN_MTRX
+              WHERE       RL.DYN_MTRX_ID = DIMC.DYN_MTRX_ID 
+                      AND DYN_MTRX.ROW_ID = DIMC.DYN_MTRX_ID
+                      AND DIMC.DIM_TYPE_CD = 'Condition'
+           GROUP BY   DIMC.DYN_MTRX_ID, DYN_MTRX.DYN_MTRX_NAME, RL.ROW_ID
+  )  PRODUCT_DIMC
+WHERE
+  ( PRODUCT.ROW_ID=PRODUCT_PRI_LIST_ITEM.PROD_ID(+)  )
+  AND  ( PRODUCT_PRI_LIST_ITEM.PRI_MTRX_ID=PRODUCT_DIMC.DYN_MTRX_ID(+)  )
+  AND  ( 'SPN' || PRODUCT.PART_NUM=SIEBEL.S_XA_CLS_PRTNUM.NAME(+)  )
+  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRODUCT.ROW_ID  )
+  AND  ( STRING_COMPARE_ALL(BO_PROD_ATTRIBS_MV.ATTR_VAL,PRODUCT_PIM_ATTR.VALID_PROD_ATTR_COMBO) = 'Y'      )
+  AND  ( STRING_COMPARE (BO_PROD_ATTRIBS_MV.ATTR_VAL, PRODUCT_DIMC.ATTR_VAL) = 'Y'  )
+  AND  ( PRODUCT_PIM_ATTR.PRODUCT_ID=PRODUCT.ROW_ID  )
+  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ID(+)  )
+  AND  ( BO_PROD_ATTRIBS_MV.ATTR_VAL=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ATTR(+)  )
+  AND  ( PRODUCT.PROD_CD='Product'  )</File>
+              <FormatSpecificOptions>
+                <PreSQLOnConfig>True</PreSQLOnConfig>
+                <ReadCentroids>False</ReadCentroids>
+                <TableStyle>Quoted</TableStyle>
+                <NoProgress>False</NoProgress>
+                <CacheData>False</CacheData>
+                <PostSQL />
+                <PreSQL />
+                <ForceSqlWcharSupport>False</ForceSqlWcharSupport>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:EDPPRDRBI
+Query=SELECT
+  PRD_BO_RPT_SMART_PA...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="SKU_VAR_NUM" size="250" source="File: aka:5f11ec5cf88a2f1cc8948256|||SELECT&#xA;  PRD_BO_RPT_SMART_PART_MV.SKU_VAR_NUM,&#xA;  SIEBEL.S_XA_CLS_PRTNUM.NAME,&#xA;  TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')&#xA;FROM&#xA;  SIEBEL.S_PROD_INT  PRODUCT,&#xA;  SIEBEL.S_XA_CLS_PRTNUM,&#xA;  BO_RPT_PIM_PROD_ATTR  PRODUCT_PIM_ATTR,&#xA;  BO_RPT_SMART_PART_MV  PRD_BO_RPT_SMART_PART_MV,&#xA;  BO_PROD_ATTRIBS_MV,&#xA;  SIEBEL.S_PRI_LST_ITEM  PRODUCT_PRI_LIST_ITEM,&#xA;  ( &#xA;  SELECT DISTINCT  DIMC.DYN_MTRX_ID,&#xA;                      DYN_MTRX.DYN_MTRX_NAME,&#xA;                      RL.ROW_ID RL_ROW_ID,&#xA;                      RTRIM (&#xA;                         XMLAGG(XMLELEMENT (&#xA;                                   E,&#xA;                                      DIMC.DIM_NAME&#xA;                                   || ' '&#xA;                                   || DIMC.OPERATOR_CD&#xA;                                   || ' '&#xA;                                   ||&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 1' THEN RL.MTRX_COL_1 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 2' THEN RL.MTRX_COL_2 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 3' THEN RL.MTRX_COL_3 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 4' THEN RL.MTRX_COL_4 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 5' THEN RL.MTRX_COL_5 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 6' THEN RL.MTRX_COL_6 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 7' THEN RL.MTRX_COL_7 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 8' THEN RL.MTRX_COL_8 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 9' THEN RL.MTRX_COL_9 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 10' THEN RL.MTRX_COL_10 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 1' THEN TO_CHAR (RL.MTRX_COL_11) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 2' THEN TO_CHAR (RL.MTRX_COL_12) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 3' THEN TO_CHAR (RL.MTRX_COL_13) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 4' THEN TO_CHAR (RL.MTRX_COL_14) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 5' THEN TO_CHAR (RL.MTRX_COL_15) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 6' THEN TO_CHAR (RL.MTRX_COL_16) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 7' THEN TO_CHAR (RL.MTRX_COL_17) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 8' THEN TO_CHAR (RL.MTRX_COL_18) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 9' THEN TO_CHAR (RL.MTRX_COL_19) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 10' THEN TO_CHAR (RL.MTRX_COL_20) END&#xA;                                   || ', '&#xA;                                )).EXTRACT ('//text()'),&#xA;                         ', '&#xA;                      )&#xA;                         ATTR_VAL&#xA;               FROM   SIEBEL.S_DYN_MTRX_DIM DIMC,&#xA;                      SIEBEL.S_DYN_MTRX_RL RL,&#xA;                      SIEBEL.S_DYN_MTRX DYN_MTRX&#xA;              WHERE       RL.DYN_MTRX_ID = DIMC.DYN_MTRX_ID &#xA;                      AND DYN_MTRX.ROW_ID = DIMC.DYN_MTRX_ID&#xA;                      AND DIMC.DIM_TYPE_CD = 'Condition'&#xA;           GROUP BY   DIMC.DYN_MTRX_ID, DYN_MTRX.DYN_MTRX_NAME, RL.ROW_ID&#xA;  )  PRODUCT_DIMC&#xA;WHERE&#xA;  ( PRODUCT.ROW_ID=PRODUCT_PRI_LIST_ITEM.PROD_ID(+)  )&#xA;  AND  ( PRODUCT_PRI_LIST_ITEM.PRI_MTRX_ID=PRODUCT_DIMC.DYN_MTRX_ID(+)  )&#xA;  AND  ( 'SPN' || PRODUCT.PART_NUM=SIEBEL.S_XA_CLS_PRTNUM.NAME(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( STRING_COMPARE_ALL(BO_PROD_ATTRIBS_MV.ATTR_VAL,PRODUCT_PIM_ATTR.VALID_PROD_ATTR_COMBO) = 'Y'      )&#xA;  AND  ( STRING_COMPARE (BO_PROD_ATTRIBS_MV.ATTR_VAL, PRODUCT_DIMC.ATTR_VAL) = 'Y'  )&#xA;  AND  ( PRODUCT_PIM_ATTR.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ID(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.ATTR_VAL=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ATTR(+)  )&#xA;  AND  ( PRODUCT.PROD_CD='Product'  )" type="V_WString" />
+                <Field name="NAME" size="30" source="File: aka:5f11ec5cf88a2f1cc8948256|||SELECT&#xA;  PRD_BO_RPT_SMART_PART_MV.SKU_VAR_NUM,&#xA;  SIEBEL.S_XA_CLS_PRTNUM.NAME,&#xA;  TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')&#xA;FROM&#xA;  SIEBEL.S_PROD_INT  PRODUCT,&#xA;  SIEBEL.S_XA_CLS_PRTNUM,&#xA;  BO_RPT_PIM_PROD_ATTR  PRODUCT_PIM_ATTR,&#xA;  BO_RPT_SMART_PART_MV  PRD_BO_RPT_SMART_PART_MV,&#xA;  BO_PROD_ATTRIBS_MV,&#xA;  SIEBEL.S_PRI_LST_ITEM  PRODUCT_PRI_LIST_ITEM,&#xA;  ( &#xA;  SELECT DISTINCT  DIMC.DYN_MTRX_ID,&#xA;                      DYN_MTRX.DYN_MTRX_NAME,&#xA;                      RL.ROW_ID RL_ROW_ID,&#xA;                      RTRIM (&#xA;                         XMLAGG(XMLELEMENT (&#xA;                                   E,&#xA;                                      DIMC.DIM_NAME&#xA;                                   || ' '&#xA;                                   || DIMC.OPERATOR_CD&#xA;                                   || ' '&#xA;                                   ||&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 1' THEN RL.MTRX_COL_1 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 2' THEN RL.MTRX_COL_2 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 3' THEN RL.MTRX_COL_3 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 4' THEN RL.MTRX_COL_4 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 5' THEN RL.MTRX_COL_5 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 6' THEN RL.MTRX_COL_6 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 7' THEN RL.MTRX_COL_7 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 8' THEN RL.MTRX_COL_8 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 9' THEN RL.MTRX_COL_9 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 10' THEN RL.MTRX_COL_10 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 1' THEN TO_CHAR (RL.MTRX_COL_11) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 2' THEN TO_CHAR (RL.MTRX_COL_12) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 3' THEN TO_CHAR (RL.MTRX_COL_13) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 4' THEN TO_CHAR (RL.MTRX_COL_14) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 5' THEN TO_CHAR (RL.MTRX_COL_15) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 6' THEN TO_CHAR (RL.MTRX_COL_16) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 7' THEN TO_CHAR (RL.MTRX_COL_17) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 8' THEN TO_CHAR (RL.MTRX_COL_18) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 9' THEN TO_CHAR (RL.MTRX_COL_19) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 10' THEN TO_CHAR (RL.MTRX_COL_20) END&#xA;                                   || ', '&#xA;                                )).EXTRACT ('//text()'),&#xA;                         ', '&#xA;                      )&#xA;                         ATTR_VAL&#xA;               FROM   SIEBEL.S_DYN_MTRX_DIM DIMC,&#xA;                      SIEBEL.S_DYN_MTRX_RL RL,&#xA;                      SIEBEL.S_DYN_MTRX DYN_MTRX&#xA;              WHERE       RL.DYN_MTRX_ID = DIMC.DYN_MTRX_ID &#xA;                      AND DYN_MTRX.ROW_ID = DIMC.DYN_MTRX_ID&#xA;                      AND DIMC.DIM_TYPE_CD = 'Condition'&#xA;           GROUP BY   DIMC.DYN_MTRX_ID, DYN_MTRX.DYN_MTRX_NAME, RL.ROW_ID&#xA;  )  PRODUCT_DIMC&#xA;WHERE&#xA;  ( PRODUCT.ROW_ID=PRODUCT_PRI_LIST_ITEM.PROD_ID(+)  )&#xA;  AND  ( PRODUCT_PRI_LIST_ITEM.PRI_MTRX_ID=PRODUCT_DIMC.DYN_MTRX_ID(+)  )&#xA;  AND  ( 'SPN' || PRODUCT.PART_NUM=SIEBEL.S_XA_CLS_PRTNUM.NAME(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( STRING_COMPARE_ALL(BO_PROD_ATTRIBS_MV.ATTR_VAL,PRODUCT_PIM_ATTR.VALID_PROD_ATTR_COMBO) = 'Y'      )&#xA;  AND  ( STRING_COMPARE (BO_PROD_ATTRIBS_MV.ATTR_VAL, PRODUCT_DIMC.ATTR_VAL) = 'Y'  )&#xA;  AND  ( PRODUCT_PIM_ATTR.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ID(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.ATTR_VAL=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ATTR(+)  )&#xA;  AND  ( PRODUCT.PROD_CD='Product'  )" type="WString" />
+                <Field name="TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')" source="File: aka:5f11ec5cf88a2f1cc8948256|||SELECT&#xA;  PRD_BO_RPT_SMART_PART_MV.SKU_VAR_NUM,&#xA;  SIEBEL.S_XA_CLS_PRTNUM.NAME,&#xA;  TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')&#xA;FROM&#xA;  SIEBEL.S_PROD_INT  PRODUCT,&#xA;  SIEBEL.S_XA_CLS_PRTNUM,&#xA;  BO_RPT_PIM_PROD_ATTR  PRODUCT_PIM_ATTR,&#xA;  BO_RPT_SMART_PART_MV  PRD_BO_RPT_SMART_PART_MV,&#xA;  BO_PROD_ATTRIBS_MV,&#xA;  SIEBEL.S_PRI_LST_ITEM  PRODUCT_PRI_LIST_ITEM,&#xA;  ( &#xA;  SELECT DISTINCT  DIMC.DYN_MTRX_ID,&#xA;                      DYN_MTRX.DYN_MTRX_NAME,&#xA;                      RL.ROW_ID RL_ROW_ID,&#xA;                      RTRIM (&#xA;                         XMLAGG(XMLELEMENT (&#xA;                                   E,&#xA;                                      DIMC.DIM_NAME&#xA;                                   || ' '&#xA;                                   || DIMC.OPERATOR_CD&#xA;                                   || ' '&#xA;                                   ||&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 1' THEN RL.MTRX_COL_1 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 2' THEN RL.MTRX_COL_2 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 3' THEN RL.MTRX_COL_3 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 4' THEN RL.MTRX_COL_4 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 5' THEN RL.MTRX_COL_5 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 6' THEN RL.MTRX_COL_6 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 7' THEN RL.MTRX_COL_7 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 8' THEN RL.MTRX_COL_8 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 9' THEN RL.MTRX_COL_9 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='String Matrix Column 10' THEN RL.MTRX_COL_10 END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 1' THEN TO_CHAR (RL.MTRX_COL_11) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 2' THEN TO_CHAR (RL.MTRX_COL_12) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 3' THEN TO_CHAR (RL.MTRX_COL_13) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 4' THEN TO_CHAR (RL.MTRX_COL_14) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 5' THEN TO_CHAR (RL.MTRX_COL_15) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 6' THEN TO_CHAR (RL.MTRX_COL_16) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 7' THEN TO_CHAR (RL.MTRX_COL_17) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 8' THEN TO_CHAR (RL.MTRX_COL_18) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 9' THEN TO_CHAR (RL.MTRX_COL_19) END,&#xA;                                    CASE WHEN DIMC.MTRX_COL_NAME ='Number Matrix Column 10' THEN TO_CHAR (RL.MTRX_COL_20) END&#xA;                                   || ', '&#xA;                                )).EXTRACT ('//text()'),&#xA;                         ', '&#xA;                      )&#xA;                         ATTR_VAL&#xA;               FROM   SIEBEL.S_DYN_MTRX_DIM DIMC,&#xA;                      SIEBEL.S_DYN_MTRX_RL RL,&#xA;                      SIEBEL.S_DYN_MTRX DYN_MTRX&#xA;              WHERE       RL.DYN_MTRX_ID = DIMC.DYN_MTRX_ID &#xA;                      AND DYN_MTRX.ROW_ID = DIMC.DYN_MTRX_ID&#xA;                      AND DIMC.DIM_TYPE_CD = 'Condition'&#xA;           GROUP BY   DIMC.DYN_MTRX_ID, DYN_MTRX.DYN_MTRX_NAME, RL.ROW_ID&#xA;  )  PRODUCT_DIMC&#xA;WHERE&#xA;  ( PRODUCT.ROW_ID=PRODUCT_PRI_LIST_ITEM.PROD_ID(+)  )&#xA;  AND  ( PRODUCT_PRI_LIST_ITEM.PRI_MTRX_ID=PRODUCT_DIMC.DYN_MTRX_ID(+)  )&#xA;  AND  ( 'SPN' || PRODUCT.PART_NUM=SIEBEL.S_XA_CLS_PRTNUM.NAME(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( STRING_COMPARE_ALL(BO_PROD_ATTRIBS_MV.ATTR_VAL,PRODUCT_PIM_ATTR.VALID_PROD_ATTR_COMBO) = 'Y'      )&#xA;  AND  ( STRING_COMPARE (BO_PROD_ATTRIBS_MV.ATTR_VAL, PRODUCT_DIMC.ATTR_VAL) = 'Y'  )&#xA;  AND  ( PRODUCT_PIM_ATTR.PRODUCT_ID=PRODUCT.ROW_ID  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.PRODUCT_ID=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ID(+)  )&#xA;  AND  ( BO_PROD_ATTRIBS_MV.ATTR_VAL=PRD_BO_RPT_SMART_PART_MV.PRODUCT_ATTR(+)  )&#xA;  AND  ( PRODUCT.PROD_CD='Product'  )" type="DateTime" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="246" y="306" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="SKU_VAR_NUM" selected="True" rename="SKU Variant" />
+                <SelectField field="NAME" selected="True" rename="Smart Part" />
+                <SelectField field="TO_DATE(PRODUCT_PIM_ATTR.FIRST_PROC_DT,'DD-MON-YY')" selected="True" rename="Product FPD" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>athena_ad_hoc</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c308440f-3053-41ca-ac6e-598f1bf21278" />
+      <Telemetry>
+        <PreviousWorkflowId value="a530080a-2c3a-467b-9274-b6bfd0d1555f" />
+        <OriginWorkflowId value="28827c08-22eb-418d-991d-e043856fab38" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
