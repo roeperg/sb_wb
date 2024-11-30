@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>User Token</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="True" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="User Token" />
+                <Field name="Table ID" />
+                <Field name="Report ID" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>byg6fn_k_0_cj39ez972fn4cdutfzcjdtnwcj4</c>
+                  <c>bnskksae5</c>
+                  <c>309</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="User Token" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Table ID" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Report ID" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="187" y="54" width="630" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 17</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="JupyterCode">
+            <Position x="212" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <DefaultVenv>1</DefaultVenv>
+              <JupyterGuidDir>a5d1a3b55d75ca4b171e0688e98811a3</JupyterGuidDir>
+              <productionModeScript>#################################
+# List all non-standard packages to be imported by your 
+# script here (only missing packages will be installed)
+from ayx import Package
+#Package.installPackages(['pandas','numpy'])
+
+
+#################################
+from ayx import Alteryx
+
+
+
+
+#################################
+credentials = Alteryx.read("#1")
+#Alteryx.write(credentials, 2)
+#print(credentials.head())
+print(credentials["User Token"][0])
+print(credentials["QuickBase Table ID"][0])
+print(credentials["Report ID"][0])
+print(credentials["Path"][0])
+
+
+
+#################################
+import json
+import requests
+import pandas as pd
+
+headers = {
+    'QB-Realm-Hostname': 'https://intuitcorp.quickbase.com',
+    'User-Agent': '{User-Agent}',
+    'Authorization': f'QB-USER-TOKEN {credentials["User Token"][0]}',
+    'Content-Type': 'application/json',
+}
+
+body = {
+    'from': 'bnskksae5', 'select': '[1,2]'
+}
+
+
+tableid = credentials["QuickBase Table ID"][0]
+quieryid = credentials["Report ID"][0]
+
+# get https://api.quickbase.com/v1/reports/%s/run?tableId=%s&amp;top=5' %(credentials["Report ID"][0],credentials["QuickBase Table ID"][0] )
+
+if True:
+    r = requests.get('https://api.quickbase.com/v1/fields?tableId=%s' %tableid,
+    headers = headers,
+    json = body
+    )
+
+    response_list = r.json()
+    schema = pd.json_normalize(response_list)
+    #Alteryx.write(schema, 1)
+    labels = schema[['id','label']]
+    Alteryx.write(labels, 1)
+
+    #print(labels.head())
+    #print(schema.columns)
+
+
+
+
+#################################
+
+
+if False:
+    if True:
+        r = requests.post(cmd,
+        headers = headers,
+        json = body
+        )
+    else:
+        r = requests.post('https://api.quickbase.com/v1/reports/1000289/run?tableId=bnskksae5&amp;top=2',
+        headers = headers,
+        json = body
+        )
+
+    #print(r.json())
+    
+    response_list = r.json()['data']
+    dataFrame = pd.json_normalize(response_list)
+
+    print(dataFrame.head)
+
+    Alteryx.write(schema, 1)
+
+
+
+
+
+#################################
+</productionModeScript>
+              <Notebook><![CDATA[{"cells":[{"metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"cell_type":"markdown","source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"cell_type":"code","source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])"],"execution_count":1,"outputs":[]},{"metadata":{},"cell_type":"code","source":["from ayx import Alteryx\n","\n"],"execution_count":2,"outputs":[]},{"metadata":{"scrolled":true},"cell_type":"code","source":["credentials = Alteryx.read(\"#1\")\n","#Alteryx.write(credentials, 2)\n","#print(credentials.head())\n","print(credentials[\"User Token\"][0])\n","print(credentials[\"Table ID\"][0])\n","print(credentials[\"Report ID\"][0])\n"],"execution_count":3,"outputs":[]},{"metadata":{},"cell_type":"code","source":["import json\n","import requests\n","import pandas as pd\n","\n","headers = {\n","    'QB-Realm-Hostname': 'https://intuitcorp.quickbase.com',\n","    'User-Agent': '{User-Agent}',\n","    'Authorization': f'QB-USER-TOKEN {credentials[\"User Token\"][0]}',\n","    'Content-Type': 'application/json',\n","}\n","\n","body = {}\n","\n","tableid = credentials[\"Table ID\"][0]\n","queryid = credentials[\"Report ID\"][0]\n"],"execution_count":4,"outputs":[]},{"metadata":{},"cell_type":"code","source":["cmd = 'https://api.quickbase.com/v1/reports/%s/run?tableId=%s'  %(queryid,tableid)\n","r = requests.post(cmd,\n","headers = headers,\n","json = body\n",")\n","#print(r.json())\n","\n","response_list = r.json()['data']\n","dataFrame = pd.json_normalize(response_list)\n","\n","print(dataFrame.head)\n","\n","Alteryx.write(dataFrame, 1)\n","\n"],"execution_count":5,"outputs":[]},{"metadata":{},"cell_type":"code","source":["# get https://api.quickbase.com/v1/reports/%s/run?tableId=%s&top=5' %(credentials[\"Report ID\"][0],credentials[\"QuickBase Table ID\"][0] )\n","\n","r = requests.get('https://api.quickbase.com/v1/fields?tableId=%s' %tableid,\n","headers = headers,\n","json = body\n",")\n","\n","response_list = r.json()\n","schema = pd.json_normalize(response_list)\n","#Alteryx.write(schema, 1)\n","labels = schema[['id','label']]\n","Alteryx.write(labels, 2)\n","\n","#print(labels.head())\n","#print(schema.columns)\n","\n","\n","\n"],"execution_count":6,"outputs":[]}],"metadata":{"kernelspec":{"name":"designerbasetools_venv","display_name":"designerbasetools_venv","language":"python"},"language_info":{"name":"python","version":"3.8.16","mimetype":"text/x-python","codemirror_mode":{"name":"ipython","version":3},"pygments_lexer":"ipython3","nbconvert_exporter":"python","file_extension":".py"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+              <GuidDir>024ba534-da0f-49fa-9958-8806ee3abd38</GuidDir>
+              <Port>52255</Port>
+              <WorkflowName>c:\users\groeper\development\scripts\quickbase_qid.yxmc</WorkflowName>
+              <specialCellMetadata>[{"label":"info","contents_keyword":"Alteryx.help()","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","first_line":"Run `Alteryx.help()` for info about useful functions.","cell_type":"markdown","cell_class":"text_cell"},{"label":"deps","contents_keyword":"installPackages","cell_css":"border: 1px solid #58a; margin: 2px;","first_line":"# List all non-standard packages to be imported by your","cell_type":"code","cell_class":"code_cell"}]</specialCellMetadata>
+              <AssetManaged>True</AssetManaged>
+              <JupyterProduction>false</JupyterProduction>
+              <LastExecutedByEngineVersion>2023.2.1.194</LastExecutedByEngineVersion>
+              <vEnvName>designerbasetools_venv</vEnvName>
+              <JupyterGuidCopy />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+            <Position x="531" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <RenameMode>RightInputRows</RenameMode>
+              <Fields orderChanged="False">
+                <Field name="1" />
+                <Field name="3" />
+                <Field name="495" />
+                <Field name="598" />
+                <Field name="63" />
+                <Field name="66" />
+                <Field name="670" />
+                <Field name="678" />
+                <Field name="859" />
+                <Field name="*Unknown" />
+              </Fields>
+              <Expression />
+              <NamesFromRows>
+                <OnError>Warn</OnError>
+                <InputMode>Mapped</InputMode>
+                <OldName>id</OldName>
+                <NewName>label</NewName>
+              </NamesFromRows>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Date Created" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Record ID#" source="PythonTool:" type="Int64" />
+                <Field name="Min_Commitment" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Contract ID#" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Minimum commitments" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="Total Minimum Commitment Amount" source="PythonTool:" type="Double" />
+                <Field name="Minimum Commit Cert" source="PythonTool:" type="Bool" />
+                <Field name="COUPA_ID" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="MIN_COMMIT_AMOUNT" source="PythonTool:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+            <Position x="372" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <RenameMode>Remove</RenameMode>
+              <Fields orderChanged="False">
+                <Field name="*Unknown" />
+              </Fields>
+              <Expression />
+              <RemovePrefixSuffix>
+                <Type>Suffix</Type>
+                <Text>.value</Text>
+                <OnError>Warn</OnError>
+              </RemovePrefixSuffix>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="1" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="3" source="PythonTool:" type="Int64" />
+                <Field name="495" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="598" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="63" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="66" source="PythonTool:" type="Double" />
+                <Field name="670" source="PythonTool:" type="Bool" />
+                <Field name="678" size="1073741823" source="PythonTool:" type="V_WString" />
+                <Field name="859" source="PythonTool:" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+            <Position x="690" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Name>Output15</Name>
+              <Abbrev />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Output</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output1" />
+      <Destination ToolID="12" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output2" />
+      <Destination ToolID="11" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>quickbase_qid</Name>
+      <Description>Runs a QuickBase report (query).
+Required fields are:
+    User Token
+    Table ID
+    Report ID</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName>Input</CategoryName>
+      <SearchTags />
+      <Author>Greg Roeper</Author>
+      <Company>Intuit</Company>
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="c3a37309-2c9d-479e-8a08-757660fa16b2" />
+      <Telemetry>
+        <PreviousWorkflowId value="e05ac4a0-55de-4114-93df-00d622fa285c" />
+        <OriginWorkflowId value="ea6aab7a-d7a6-4a93-b410-414ba646ff48" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (13)</Name>
+          <ToolId value="13" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (15)</Description>
+              <Name>Macro Output (15)</Name>
+              <ToolId value="15" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (16)</Description>
+              <Name>Macro Input (16)</Name>
+              <ToolId value="16" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="16" Selected="True" />
+        <Tool ToolId="15" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
